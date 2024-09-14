@@ -19,6 +19,11 @@ namespace HeyGen
 
         private readonly global::System.Net.Http.HttpClient _httpClient;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext { get; set; } = global::HeyGen.SourceGenerationContext.Default;
+
 
         /// <summary>
         /// Creates a new instance of the PersonalizedVideoClient.
@@ -29,8 +34,7 @@ namespace HeyGen
         /// <param name="baseUri"></param> 
         public PersonalizedVideoClient(
             global::System.Net.Http.HttpClient? httpClient = null,
-            global::System.Uri? baseUri = null 
-            )
+            global::System.Uri? baseUri = null)
         {
             _httpClient = httpClient ?? new global::System.Net.Http.HttpClient();
             _httpClient.BaseAddress ??= baseUri ?? new global::System.Uri(BaseUrl);
