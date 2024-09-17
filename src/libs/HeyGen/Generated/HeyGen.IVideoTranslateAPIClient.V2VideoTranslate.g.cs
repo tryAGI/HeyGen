@@ -38,9 +38,9 @@ namespace HeyGen
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task V2VideoTranslateAsync(
             string? outputLanguage = default,
-            double speakerNum = default,
+            double? speakerNum = default,
             string? title = default,
-            bool translateAudioOnly = default,
+            bool? translateAudioOnly = default,
             string? videoUrl = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

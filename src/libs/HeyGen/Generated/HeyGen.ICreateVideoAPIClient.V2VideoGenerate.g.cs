@@ -39,7 +39,7 @@ namespace HeyGen
             global::HeyGen.V2VideoGenerateRequestAspectRatio? aspectRatio = default,
             global::HeyGen.V2VideoGenerateRequestCallbackId? callbackId = default,
             global::HeyGen.V2VideoGenerateRequestDimension? dimension = default,
-            bool test = default,
+            bool? test = default,
             string? title = default,
             global::System.Collections.Generic.IList<global::HeyGen.V2VideoGenerateRequestVideoInput>? videoInputs = default,
             global::System.Threading.CancellationToken cancellationToken = default);
