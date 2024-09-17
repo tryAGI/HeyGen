@@ -18,7 +18,7 @@ namespace HeyGen
         /// Example: 1
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("speaker_num")]
-        public double SpeakerNum { get; set; }
+        public double? SpeakerNum { get; set; }
 
         /// <summary>
         /// Example: My Title
@@ -30,7 +30,7 @@ namespace HeyGen
         /// Example: false
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("translate_audio_only")]
-        public bool TranslateAudioOnly { get; set; }
+        public bool? TranslateAudioOnly { get; set; }
 
         /// <summary>
         /// Example: https://static.heygen.ai/heygen/asset/originalnew.mp4

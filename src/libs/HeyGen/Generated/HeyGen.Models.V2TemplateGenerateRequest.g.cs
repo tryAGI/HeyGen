@@ -12,7 +12,7 @@ namespace HeyGen
         /// Example: false
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("caption")]
-        public bool Caption { get; set; }
+        public bool? Caption { get; set; }
 
         /// <summary>
         /// 
@@ -24,7 +24,7 @@ namespace HeyGen
         /// Example: false
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("test")]
-        public bool Test { get; set; }
+        public bool? Test { get; set; }
 
         /// <summary>
         /// Example: New Video

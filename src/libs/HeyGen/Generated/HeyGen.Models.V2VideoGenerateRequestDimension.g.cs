@@ -12,13 +12,13 @@ namespace HeyGen
         /// Example: 720
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("height")]
-        public double Height { get; set; }
+        public double? Height { get; set; }
 
         /// <summary>
         /// Example: 1280
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("width")]
-        public double Width { get; set; }
+        public double? Width { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
