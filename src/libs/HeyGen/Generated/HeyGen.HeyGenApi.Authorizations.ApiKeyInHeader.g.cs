@@ -9,12 +9,16 @@ namespace HeyGen
         /// Authorize using ApiKey authentication.
         /// </summary>
         /// <param name="apiKey"></param>
-        public void AuthorizeUsingApiKey(
+        public void AuthorizeUsingApiKeyInHeader(
             string apiKey)
         {
             apiKey = apiKey ?? throw new global::System.ArgumentNullException(nameof(apiKey));
 
-            _httpClient.DefaultRequestHeaders.Add("X-Api-Key", apiKey);
+            _authorization = new global::HeyGen.EndPointAuthorization
+            {
+                Name = "X-Api-Key",
+                Value = apiKey,
+            };
         }
     }
 }

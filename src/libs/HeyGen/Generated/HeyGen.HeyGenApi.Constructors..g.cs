@@ -5,15 +5,16 @@ namespace HeyGen
 {
     public sealed partial class HeyGenApi
     {
-        /// <inheritdoc cref="HeyGenApi(global::System.Net.Http.HttpClient?, global::System.Uri?)"/>
+        /// <inheritdoc cref="HeyGenApi(global::System.Net.Http.HttpClient?, global::System.Uri?, global::HeyGen.EndPointAuthorization?)"/>
         public HeyGenApi(
             string apiKey,
             global::System.Net.Http.HttpClient? httpClient = null,
-            global::System.Uri? baseUri = null) : this(httpClient, baseUri)
+            global::System.Uri? baseUri = null,
+            global::HeyGen.EndPointAuthorization? authorization = null) : this(httpClient, baseUri, authorization)
         {
             Authorizing(_httpClient, ref apiKey);
 
-            AuthorizeUsingApiKey(apiKey);
+            AuthorizeUsingApiKeyInHeader(apiKey);
 
             Authorized(_httpClient);
         }
