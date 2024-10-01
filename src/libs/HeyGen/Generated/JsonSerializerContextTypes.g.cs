@@ -13,6 +13,11 @@ namespace HeyGen
         /// <summary>
         /// 
         /// </summary>
+        public global::System.Collections.Generic.Dictionary<string, string>? StringStringDictionary { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         public global::HeyGen.V2VideoGenerateRequest? Type0 { get; set; }
         /// <summary>
         /// 
