@@ -118,7 +118,7 @@ namespace HeyGen
         /// <summary>
         /// 
         /// </summary>
-        public global::HeyGen.StreamingCreateTokenRequest? Type25 { get; set; }
+        public object? Type25 { get; set; }
         /// <summary>
         /// 
         /// </summary>
