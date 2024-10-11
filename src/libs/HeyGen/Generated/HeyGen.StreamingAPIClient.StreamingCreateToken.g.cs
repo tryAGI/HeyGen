@@ -7,11 +7,11 @@ namespace HeyGen
     {
         partial void PrepareStreamingCreateTokenArguments(
             global::System.Net.Http.HttpClient httpClient,
-            global::HeyGen.StreamingCreateTokenRequest request);
+            object request);
         partial void PrepareStreamingCreateTokenRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::HeyGen.StreamingCreateTokenRequest request);
+            object request);
         partial void ProcessStreamingCreateTokenResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -24,7 +24,7 @@ namespace HeyGen
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task StreamingCreateTokenAsync(
-            global::HeyGen.StreamingCreateTokenRequest request,
+            object request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
@@ -96,7 +96,7 @@ namespace HeyGen
         public async global::System.Threading.Tasks.Task StreamingCreateTokenAsync(
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var request = new global::HeyGen.StreamingCreateTokenRequest
+            var request = new object
             {
             };
 
