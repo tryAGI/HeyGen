@@ -26,7 +26,7 @@ namespace HeyGen
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task V1WebhookEndpointAddAsync(
-            global::System.Collections.Generic.IList<global::HeyGen.V1WebhookEndpointAddRequestEvent>? events = default,
+            global::System.Collections.Generic.IList<object>? events = default,
             string? url = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

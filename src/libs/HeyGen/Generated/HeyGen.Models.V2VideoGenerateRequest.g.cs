@@ -12,13 +12,13 @@ namespace HeyGen
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("aspect_ratio")]
-        public global::HeyGen.V2VideoGenerateRequestAspectRatio? AspectRatio { get; set; }
+        public object? AspectRatio { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("callback_id")]
-        public global::HeyGen.V2VideoGenerateRequestCallbackId? CallbackId { get; set; }
+        public object? CallbackId { get; set; }
 
         /// <summary>
         /// 
