@@ -12,7 +12,7 @@ namespace HeyGen
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("events")]
-        public global::System.Collections.Generic.IList<global::HeyGen.V1WebhookEndpointAddRequestEvent>? Events { get; set; }
+        public global::System.Collections.Generic.IList<object>? Events { get; set; }
 
         /// <summary>
         /// Example: &lt;url&gt;
