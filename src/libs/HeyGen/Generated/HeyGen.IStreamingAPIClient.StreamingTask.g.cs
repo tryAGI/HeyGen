@@ -10,7 +10,7 @@ namespace HeyGen
         /// </summary>
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
+        /// <exception cref="global::HeyGen.ApiException"></exception>
         global::System.Threading.Tasks.Task StreamingTaskAsync(
             global::HeyGen.StreamingTaskRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
