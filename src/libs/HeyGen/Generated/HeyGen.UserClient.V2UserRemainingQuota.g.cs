@@ -19,7 +19,7 @@ namespace HeyGen
         /// v2/user/remaining_quota
         /// </summary>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
+        /// <exception cref="global::HeyGen.ApiException"></exception>
         public async global::System.Threading.Tasks.Task V2UserRemainingQuotaAsync(
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -70,7 +70,23 @@ namespace HeyGen
             ProcessV2UserRemainingQuotaResponse(
                 httpClient: HttpClient,
                 httpResponseMessage: __response);
-            __response.EnsureSuccessStatusCode();
+            try
+            {
+                __response.EnsureSuccessStatusCode();
+            }
+            catch (global::System.Net.Http.HttpRequestException __ex)
+            {
+                throw new global::HeyGen.ApiException(
+                    message: __response.ReasonPhrase ?? string.Empty,
+                    innerException: __ex,
+                    statusCode: __response.StatusCode)
+                {
+                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                        __response.Headers,
+                        h => h.Key,
+                        h => h.Value),
+                };
+            }
         }
     }
 }

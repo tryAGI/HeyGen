@@ -25,6 +25,11 @@ namespace HeyGen
         /// <inheritdoc/>
         public global::System.Collections.Generic.List<global::HeyGen.EndPointAuthorization> Authorizations { get; }
 
+        /// <inheritdoc/>
+        public bool ReadResponseAsString { get; set; }
+#if DEBUG
+            = true;
+#endif
         /// <summary>
         /// 
         /// </summary>

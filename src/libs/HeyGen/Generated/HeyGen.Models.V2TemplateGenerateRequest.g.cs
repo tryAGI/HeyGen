@@ -11,6 +11,7 @@ namespace HeyGen
         /// <summary>
         /// Example: false
         /// </summary>
+        /// <example>false</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("caption")]
         public bool? Caption { get; set; }
 
@@ -23,12 +24,14 @@ namespace HeyGen
         /// <summary>
         /// Example: false
         /// </summary>
+        /// <example>false</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("test")]
         public bool? Test { get; set; }
 
         /// <summary>
         /// Example: New Video
         /// </summary>
+        /// <example>New Video</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("title")]
         public string? Title { get; set; }
 
@@ -44,91 +47,40 @@ namespace HeyGen
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="V2TemplateGenerateRequest" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="caption">
+        /// Example: false
+        /// </param>
+        /// <param name="dimension"></param>
+        /// <param name="test">
+        /// Example: false
+        /// </param>
+        /// <param name="title">
+        /// Example: New Video
+        /// </param>
+        /// <param name="variables"></param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public V2TemplateGenerateRequest(
+            bool? caption,
+            global::HeyGen.V2TemplateGenerateRequestDimension? dimension,
+            bool? test,
+            string? title,
+            global::HeyGen.V2TemplateGenerateRequestVariables? variables)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Caption = caption;
+            this.Dimension = dimension;
+            this.Test = test;
+            this.Title = title;
+            this.Variables = variables;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="V2TemplateGenerateRequest" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public V2TemplateGenerateRequest()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::HeyGen.V2TemplateGenerateRequest? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::HeyGen.V2TemplateGenerateRequest),
-                jsonSerializerContext) as global::HeyGen.V2TemplateGenerateRequest;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::HeyGen.V2TemplateGenerateRequest? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::HeyGen.V2TemplateGenerateRequest>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::HeyGen.V2TemplateGenerateRequest?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::HeyGen.V2TemplateGenerateRequest),
-                jsonSerializerContext).ConfigureAwait(false)) as global::HeyGen.V2TemplateGenerateRequest;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::HeyGen.V2TemplateGenerateRequest?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::HeyGen.V2TemplateGenerateRequest?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

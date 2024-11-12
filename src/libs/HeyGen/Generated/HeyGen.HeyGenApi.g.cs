@@ -47,6 +47,11 @@ namespace HeyGen
         /// <inheritdoc/>
         public global::System.Collections.Generic.List<global::HeyGen.EndPointAuthorization> Authorizations { get; }
 
+        /// <inheritdoc/>
+        public bool ReadResponseAsString { get; set; }
+#if DEBUG
+            = true;
+#endif
         /// <summary>
         /// 
         /// </summary>
@@ -58,6 +63,7 @@ namespace HeyGen
         /// </summary>
         public ListsClient Lists => new ListsClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -67,6 +73,7 @@ namespace HeyGen
         /// </summary>
         public CreateVideoAPIClient CreateVideoAPI => new CreateVideoAPIClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -82,6 +89,7 @@ namespace HeyGen
         /// </summary>
         public TemplateAPIClient TemplateAPI => new TemplateAPIClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -91,6 +99,7 @@ namespace HeyGen
         /// </summary>
         public VideoTranslateAPIClient VideoTranslateAPI => new VideoTranslateAPIClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -100,6 +109,7 @@ namespace HeyGen
         /// </summary>
         public StreamingAPIClient StreamingAPI => new StreamingAPIClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -109,6 +119,7 @@ namespace HeyGen
         /// </summary>
         public WebhooksClient Webhooks => new WebhooksClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -118,6 +129,7 @@ namespace HeyGen
         /// </summary>
         public TalkingPhotoClient TalkingPhoto => new TalkingPhotoClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -128,6 +140,7 @@ namespace HeyGen
         /// </summary>
         public PersonalizedVideoClient PersonalizedVideo => new PersonalizedVideoClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -137,6 +150,7 @@ namespace HeyGen
         /// </summary>
         public UserClient User => new UserClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -146,6 +160,7 @@ namespace HeyGen
         /// </summary>
         public AssetsClient Assets => new AssetsClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 

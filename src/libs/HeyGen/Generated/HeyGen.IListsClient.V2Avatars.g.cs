@@ -9,7 +9,7 @@ namespace HeyGen
         /// v2/avatars
         /// </summary>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
+        /// <exception cref="global::HeyGen.ApiException"></exception>
         global::System.Threading.Tasks.Task V2AvatarsAsync(
             global::System.Threading.CancellationToken cancellationToken = default);
     }

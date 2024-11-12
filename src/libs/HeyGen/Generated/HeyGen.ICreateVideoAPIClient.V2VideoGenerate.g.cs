@@ -11,7 +11,7 @@ namespace HeyGen
         /// </summary>
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
+        /// <exception cref="global::HeyGen.ApiException"></exception>
         global::System.Threading.Tasks.Task V2VideoGenerateAsync(
             global::HeyGen.V2VideoGenerateRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
