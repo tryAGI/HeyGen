@@ -13,6 +13,7 @@ namespace HeyGen
         DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
         Converters = new global::System.Type[] 
         { 
+            typeof(global::HeyGen.JsonConverters.UnixTimestampJsonConverter),
         })]
 
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HeyGen.JsonSerializerContextTypes))]
