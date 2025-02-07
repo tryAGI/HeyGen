@@ -34,7 +34,9 @@ namespace HeyGen
         /// <param name="url">
         /// Example: &lt;url&gt;
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public V1WebhookEndpointAddRequest(
             global::System.Collections.Generic.IList<object>? events,
             string? url)

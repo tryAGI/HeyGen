@@ -31,7 +31,9 @@ namespace HeyGen
         /// </summary>
         /// <param name="character"></param>
         /// <param name="voice"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public V2VideoGenerateRequestVideoInput(
             global::HeyGen.V2VideoGenerateRequestVideoInputCharacter? character,
             global::HeyGen.V2VideoGenerateRequestVideoInputVoice? voice)
