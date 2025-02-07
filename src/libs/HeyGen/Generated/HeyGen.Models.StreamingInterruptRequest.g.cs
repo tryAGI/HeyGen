@@ -27,7 +27,9 @@ namespace HeyGen
         /// <param name="sessionId">
         /// Example: &lt;session_id&gt;
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public StreamingInterruptRequest(
             string? sessionId)
         {

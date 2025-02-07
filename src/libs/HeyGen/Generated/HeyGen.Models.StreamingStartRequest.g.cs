@@ -34,7 +34,9 @@ namespace HeyGen
         /// <param name="sessionId">
         /// Example: f8c1f5bd-edbd-11ee-ac61-06daf6be75b4
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public StreamingStartRequest(
             global::HeyGen.StreamingStartRequestSdp? sdp,
             string? sessionId)

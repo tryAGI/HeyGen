@@ -47,7 +47,9 @@ namespace HeyGen
         /// <param name="voiceId">
         /// Example: 2f72ee82b83d4b00af16c4771d611752
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public V2VideoGenerateRequestVideoInputVoice(
             string? inputText,
             string? type,

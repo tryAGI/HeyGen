@@ -44,7 +44,9 @@ namespace HeyGen
         /// <param name="type">
         /// Example: text
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public V2TemplateGenerateRequestVariablesFirstName(
             string? name,
             global::HeyGen.V2TemplateGenerateRequestVariablesFirstNameProperties? properties,
