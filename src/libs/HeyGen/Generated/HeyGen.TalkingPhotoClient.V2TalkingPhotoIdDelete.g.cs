@@ -28,7 +28,7 @@ namespace HeyGen
             PrepareV2TalkingPhotoIdDeleteArguments(
                 httpClient: HttpClient);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::HeyGen.PathBuilder(
                 path: "/v2/talking_photo/<id>",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

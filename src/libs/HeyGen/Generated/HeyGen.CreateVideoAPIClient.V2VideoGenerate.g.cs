@@ -36,7 +36,7 @@ namespace HeyGen
                 httpClient: HttpClient,
                 request: request);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::HeyGen.PathBuilder(
                 path: "/v2/video/generate",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

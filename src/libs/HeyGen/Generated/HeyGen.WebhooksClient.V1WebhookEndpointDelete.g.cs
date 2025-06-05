@@ -35,7 +35,7 @@ namespace HeyGen
                 httpClient: HttpClient,
                 endpointId: ref endpointId);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::HeyGen.PathBuilder(
                 path: "/v1/webhook/endpoint.delete",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 

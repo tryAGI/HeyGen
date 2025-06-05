@@ -28,7 +28,7 @@ namespace HeyGen
             PrepareV1VideoListArguments(
                 httpClient: HttpClient);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::HeyGen.PathBuilder(
                 path: "/v1/video.list",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

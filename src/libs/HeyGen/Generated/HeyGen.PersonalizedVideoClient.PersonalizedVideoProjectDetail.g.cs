@@ -35,7 +35,7 @@ namespace HeyGen
                 httpClient: HttpClient,
                 id: ref id);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::HeyGen.PathBuilder(
                 path: "/v1/personalized_video/project/detail",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 
