@@ -28,7 +28,7 @@ namespace HeyGen
             PrepareV1AssetUploadArguments(
                 httpClient: HttpClient);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::HeyGen.PathBuilder(
                 path: "/v1/asset",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

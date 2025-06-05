@@ -35,7 +35,7 @@ namespace HeyGen
                 httpClient: HttpClient,
                 request: request);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::HeyGen.PathBuilder(
                 path: "/v1/streaming.task",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

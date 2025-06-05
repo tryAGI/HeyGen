@@ -28,7 +28,7 @@ namespace HeyGen
             PrepareStreamingAvatarListArguments(
                 httpClient: HttpClient);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::HeyGen.PathBuilder(
                 path: "/v1/streaming/avatar.list",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

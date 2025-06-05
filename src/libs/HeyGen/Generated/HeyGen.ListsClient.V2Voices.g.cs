@@ -28,7 +28,7 @@ namespace HeyGen
             PrepareV2VoicesArguments(
                 httpClient: HttpClient);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::HeyGen.PathBuilder(
                 path: "/v2/voices",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();
