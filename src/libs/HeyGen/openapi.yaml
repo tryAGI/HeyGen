@@ -529,7 +529,8 @@ paths:
             schema:
               type: object
             examples:
-              streaming.create_token: { }
+              streaming.create_token:
+                value: { }
       responses:
         '200':
           description: ''
