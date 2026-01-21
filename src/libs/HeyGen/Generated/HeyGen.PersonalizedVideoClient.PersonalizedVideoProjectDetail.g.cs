@@ -38,7 +38,7 @@ namespace HeyGen
             var __pathBuilder = new global::HeyGen.PathBuilder(
                 path: "/v1/personalized_video/project/detail",
                 baseUri: HttpClient.BaseAddress); 
-            __pathBuilder 
+            __pathBuilder
                 .AddOptionalParameter("id", id) 
                 ; 
             var __path = __pathBuilder.ToString();
