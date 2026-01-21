@@ -167,7 +167,7 @@ namespace HeyGen
         /// Example: My Title
         /// </param>
         /// <param name="videoInputs">
-        /// Example: []
+        /// Example: [{"character":{"avatar_id":"Kristin_public_3_20240108","avatar_style":"normal","type":"avatar"},"voice":{"input_text":"Welcome to the new era of video creation with HeyGen! Simply type your script to get started!","type":"text","voice_id":"2f72ee82b83d4b00af16c4771d611752"}}]
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
