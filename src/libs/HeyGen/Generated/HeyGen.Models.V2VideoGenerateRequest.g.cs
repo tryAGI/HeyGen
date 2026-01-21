@@ -41,9 +41,9 @@ namespace HeyGen
         public string? Title { get; set; }
 
         /// <summary>
-        /// Example: []
+        /// Example: [{"character":{"avatar_id":"Kristin_public_3_20240108","avatar_style":"normal","type":"avatar"},"voice":{"input_text":"Welcome to the new era of video creation with HeyGen! Simply type your script to get started!","type":"text","voice_id":"2f72ee82b83d4b00af16c4771d611752"}}]
         /// </summary>
-        /// <example>[]</example>
+        /// <example>[{"character":{"avatar_id":"Kristin_public_3_20240108","avatar_style":"normal","type":"avatar"},"voice":{"input_text":"Welcome to the new era of video creation with HeyGen! Simply type your script to get started!","type":"text","voice_id":"2f72ee82b83d4b00af16c4771d611752"}}]</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("video_inputs")]
         public global::System.Collections.Generic.IList<global::HeyGen.V2VideoGenerateRequestVideoInput>? VideoInputs { get; set; }
 
@@ -66,7 +66,7 @@ namespace HeyGen
         /// Example: My Title
         /// </param>
         /// <param name="videoInputs">
-        /// Example: []
+        /// Example: [{"character":{"avatar_id":"Kristin_public_3_20240108","avatar_style":"normal","type":"avatar"},"voice":{"input_text":"Welcome to the new era of video creation with HeyGen! Simply type your script to get started!","type":"text","voice_id":"2f72ee82b83d4b00af16c4771d611752"}}]
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]

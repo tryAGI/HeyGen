@@ -23,7 +23,7 @@ namespace HeyGen
         /// Example: &lt;project_id&gt;
         /// </param>
         /// <param name="variablesList">
-        /// Example: []
+        /// Example: [{"email":"john@mail.com","first_name":"John"}]
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
