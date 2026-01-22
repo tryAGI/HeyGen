@@ -9,6 +9,6 @@ fi
 autosdk generate openapi.yaml \
   --namespace HeyGen \
   --clientClassName HeyGenApi \
-  --targetFramework net8.0 \
+  --targetFramework net10.0 \
   --output Generated \
   --exclude-deprecated-operations

@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup Label="Base packages">
@@ -12,12 +12,12 @@
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="18.0.0" />
     <PackageReference Include="MSTest.TestAdapter" Version="3.11.0" />
     <PackageReference Include="MSTest.TestFramework" Version="3.11.0" />
-    <PackageReference Include="FluentAssertions" Version="8.7.1" />
+    <PackageReference Include="AwesomeAssertions" Version="9.1.0" />
   </ItemGroup>
 
   <ItemGroup Label="GlobalUsings">
     <Using Include="Microsoft.VisualStudio.TestTools.UnitTesting" />
-    <Using Include="FluentAssertions" />
+    <Using Include="AwesomeAssertions" />
   </ItemGroup>
 
   <ItemGroup>

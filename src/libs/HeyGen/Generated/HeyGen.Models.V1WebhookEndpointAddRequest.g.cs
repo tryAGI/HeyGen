@@ -9,8 +9,9 @@ namespace HeyGen
     public sealed partial class V1WebhookEndpointAddRequest
     {
         /// <summary>
-        /// 
+        /// Example: []
         /// </summary>
+        /// <example>[]</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("events")]
         public global::System.Collections.Generic.IList<object>? Events { get; set; }
 
@@ -30,7 +31,9 @@ namespace HeyGen
         /// <summary>
         /// Initializes a new instance of the <see cref="V1WebhookEndpointAddRequest" /> class.
         /// </summary>
-        /// <param name="events"></param>
+        /// <param name="events">
+        /// Example: []
+        /// </param>
         /// <param name="url">
         /// Example: &lt;url&gt;
         /// </param>

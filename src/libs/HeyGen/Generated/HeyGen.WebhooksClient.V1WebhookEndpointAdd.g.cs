@@ -155,7 +155,9 @@ namespace HeyGen
         /// v1/webhook/endpoint.add<br/>
         /// v1/webhook/endpoint.add
         /// </summary>
-        /// <param name="events"></param>
+        /// <param name="events">
+        /// Example: []
+        /// </param>
         /// <param name="url">
         /// Example: &lt;url&gt;
         /// </param>

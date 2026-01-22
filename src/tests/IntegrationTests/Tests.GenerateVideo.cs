@@ -19,8 +19,8 @@ public partial class Tests
                 Width = 1920,
                 Height = 1080,
             },
-            aspectRatio: new V2VideoGenerateRequestAspectRatio(),
-            callbackId: new V2VideoGenerateRequestCallbackId(),
+            aspectRatio: null,
+            callbackId: null,
             videoInputs: new List<V2VideoGenerateRequestVideoInput>
             {
                 new()

@@ -3,7 +3,6 @@ namespace HeyGen.IntegrationTests;
 [TestClass]
 public partial class Tests
 {
-    [TestMethod]
     public HeyGenApi GetAuthenticatedApi()
     {
         var apiKey =

@@ -9,14 +9,16 @@ namespace HeyGen
     public sealed partial class V2VideoGenerateRequest
     {
         /// <summary>
-        /// 
+        /// Example: openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464
         /// </summary>
+        /// <example>openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("aspect_ratio")]
         public object? AspectRatio { get; set; }
 
         /// <summary>
-        /// 
+        /// Example: openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464
         /// </summary>
+        /// <example>openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("callback_id")]
         public object? CallbackId { get; set; }
 
@@ -56,8 +58,12 @@ namespace HeyGen
         /// <summary>
         /// Initializes a new instance of the <see cref="V2VideoGenerateRequest" /> class.
         /// </summary>
-        /// <param name="aspectRatio"></param>
-        /// <param name="callbackId"></param>
+        /// <param name="aspectRatio">
+        /// Example: openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464
+        /// </param>
+        /// <param name="callbackId">
+        /// Example: openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464
+        /// </param>
         /// <param name="dimension"></param>
         /// <param name="test">
         /// Example: true
