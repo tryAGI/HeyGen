@@ -14,10 +14,12 @@ namespace HeyGen
         /// 
         /// </summary>
         public global::System.Collections.Generic.Dictionary<string, string>? StringStringDictionary { get; set; }
+
         /// <summary>
         /// 
         /// </summary>
         public global::System.Collections.Generic.Dictionary<string, object>? StringObjectDictionary { get; set; }
+
         /// <summary>
         /// 
         /// </summary>
@@ -139,5 +141,18 @@ namespace HeyGen
         /// 
         /// </summary>
         public global::HeyGen.PersonalizedVideoAddContactRequestVariablesListItem? Type28 { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::System.Collections.Generic.List<global::HeyGen.V2VideoGenerateRequestVideoInput>? ListType0 { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::System.Collections.Generic.List<object>? ListType1 { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::System.Collections.Generic.List<global::HeyGen.PersonalizedVideoAddContactRequestVariablesListItem>? ListType2 { get; set; }
     }
 }
