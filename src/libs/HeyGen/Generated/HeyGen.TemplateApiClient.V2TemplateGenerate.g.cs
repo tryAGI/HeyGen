@@ -3,41 +3,42 @@
 
 namespace HeyGen
 {
-    public partial class WebhooksClient
+    public partial class TemplateApiClient
     {
-        partial void PrepareV1WebhookEndpointAddArguments(
+        partial void PrepareV2TemplateGenerateArguments(
             global::System.Net.Http.HttpClient httpClient,
-            global::HeyGen.V1WebhookEndpointAddRequest request);
-        partial void PrepareV1WebhookEndpointAddRequest(
+            global::HeyGen.V2TemplateGenerateRequest request);
+        partial void PrepareV2TemplateGenerateRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::HeyGen.V1WebhookEndpointAddRequest request);
-        partial void ProcessV1WebhookEndpointAddResponse(
+            global::HeyGen.V2TemplateGenerateRequest request);
+        partial void ProcessV2TemplateGenerateResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
         /// <summary>
-        /// v1/webhook/endpoint.add<br/>
-        /// v1/webhook/endpoint.add
+        /// v2/template/generate<br/>
+        /// Generated Video: [https://app.heygen.com/videos/7cba9d29d6db46b88471221fdbc4fb75](https://app.heygen.com/videos/7cba9d29d6db46b88471221fdbc4fb75)<br/>
+        /// &lt;img src="https://resource.heygen.ai/video/gifs/7cba9d29d6db46b88471221fdbc4fb75.gif" alt=""&gt;
         /// </summary>
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HeyGen.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task V1WebhookEndpointAddAsync(
+        public async global::System.Threading.Tasks.Task V2TemplateGenerateAsync(
 
-            global::HeyGen.V1WebhookEndpointAddRequest request,
+            global::HeyGen.V2TemplateGenerateRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
 
             PrepareArguments(
                 client: HttpClient);
-            PrepareV1WebhookEndpointAddArguments(
+            PrepareV2TemplateGenerateArguments(
                 httpClient: HttpClient,
                 request: request);
 
             var __pathBuilder = new global::HeyGen.PathBuilder(
-                path: "/v1/webhook/endpoint.add",
+                path: "/v2/template/<id>/generate",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
@@ -73,7 +74,7 @@ namespace HeyGen
             PrepareRequest(
                 client: HttpClient,
                 request: __httpRequest);
-            PrepareV1WebhookEndpointAddRequest(
+            PrepareV2TemplateGenerateRequest(
                 httpClient: HttpClient,
                 httpRequestMessage: __httpRequest,
                 request: request);
@@ -86,7 +87,7 @@ namespace HeyGen
             ProcessResponse(
                 client: HttpClient,
                 response: __response);
-            ProcessV1WebhookEndpointAddResponse(
+            ProcessV2TemplateGenerateResponse(
                 httpClient: HttpClient,
                 httpResponseMessage: __response);
 
@@ -153,29 +154,41 @@ namespace HeyGen
         }
 
         /// <summary>
-        /// v1/webhook/endpoint.add<br/>
-        /// v1/webhook/endpoint.add
+        /// v2/template/generate<br/>
+        /// Generated Video: [https://app.heygen.com/videos/7cba9d29d6db46b88471221fdbc4fb75](https://app.heygen.com/videos/7cba9d29d6db46b88471221fdbc4fb75)<br/>
+        /// &lt;img src="https://resource.heygen.ai/video/gifs/7cba9d29d6db46b88471221fdbc4fb75.gif" alt=""&gt;
         /// </summary>
-        /// <param name="events">
-        /// Example: []
+        /// <param name="caption">
+        /// Example: false
         /// </param>
-        /// <param name="url">
-        /// Example: &lt;url&gt;
+        /// <param name="dimension"></param>
+        /// <param name="test">
+        /// Example: false
         /// </param>
+        /// <param name="title">
+        /// Example: New Video
+        /// </param>
+        /// <param name="variables"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task V1WebhookEndpointAddAsync(
-            global::System.Collections.Generic.IList<object>? events = default,
-            string? url = default,
+        public async global::System.Threading.Tasks.Task V2TemplateGenerateAsync(
+            bool? caption = default,
+            global::HeyGen.V2TemplateGenerateRequestDimension? dimension = default,
+            bool? test = default,
+            string? title = default,
+            global::HeyGen.V2TemplateGenerateRequestVariables? variables = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HeyGen.V1WebhookEndpointAddRequest
+            var __request = new global::HeyGen.V2TemplateGenerateRequest
             {
-                Events = events,
-                Url = url,
+                Caption = caption,
+                Dimension = dimension,
+                Test = test,
+                Title = title,
+                Variables = variables,
             };
 
-            await V1WebhookEndpointAddAsync(
+            await V2TemplateGenerateAsync(
                 request: __request,
                 cancellationToken: cancellationToken).ConfigureAwait(false);
         }

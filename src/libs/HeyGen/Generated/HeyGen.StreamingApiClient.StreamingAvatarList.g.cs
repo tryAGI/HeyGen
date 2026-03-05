@@ -3,45 +3,37 @@
 
 namespace HeyGen
 {
-    public partial class WebhooksClient
+    public partial class StreamingApiClient
     {
-        partial void PrepareV1WebhookEndpointAddArguments(
+        partial void PrepareStreamingAvatarListArguments(
+            global::System.Net.Http.HttpClient httpClient);
+        partial void PrepareStreamingAvatarListRequest(
             global::System.Net.Http.HttpClient httpClient,
-            global::HeyGen.V1WebhookEndpointAddRequest request);
-        partial void PrepareV1WebhookEndpointAddRequest(
-            global::System.Net.Http.HttpClient httpClient,
-            global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::HeyGen.V1WebhookEndpointAddRequest request);
-        partial void ProcessV1WebhookEndpointAddResponse(
+            global::System.Net.Http.HttpRequestMessage httpRequestMessage);
+        partial void ProcessStreamingAvatarListResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
         /// <summary>
-        /// v1/webhook/endpoint.add<br/>
-        /// v1/webhook/endpoint.add
+        /// streaming/avatar.list<br/>
+        /// streaming/avatar.list
         /// </summary>
-        /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HeyGen.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task V1WebhookEndpointAddAsync(
-
-            global::HeyGen.V1WebhookEndpointAddRequest request,
+        public async global::System.Threading.Tasks.Task StreamingAvatarListAsync(
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            request = request ?? throw new global::System.ArgumentNullException(nameof(request));
-
             PrepareArguments(
                 client: HttpClient);
-            PrepareV1WebhookEndpointAddArguments(
-                httpClient: HttpClient,
-                request: request);
+            PrepareStreamingAvatarListArguments(
+                httpClient: HttpClient);
 
             var __pathBuilder = new global::HeyGen.PathBuilder(
-                path: "/v1/webhook/endpoint.add",
+                path: "/v1/streaming/avatar.list",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
-                method: global::System.Net.Http.HttpMethod.Post,
+                method: global::System.Net.Http.HttpMethod.Get,
                 requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 #if NET6_0_OR_GREATER
             __httpRequest.Version = global::System.Net.HttpVersion.Version11;
@@ -63,20 +55,13 @@ namespace HeyGen
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
                 }
             }
-            var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
-            var __httpRequestContent = new global::System.Net.Http.StringContent(
-                content: __httpRequestContentBody,
-                encoding: global::System.Text.Encoding.UTF8,
-                mediaType: "application/json");
-            __httpRequest.Content = __httpRequestContent;
 
             PrepareRequest(
                 client: HttpClient,
                 request: __httpRequest);
-            PrepareV1WebhookEndpointAddRequest(
+            PrepareStreamingAvatarListRequest(
                 httpClient: HttpClient,
-                httpRequestMessage: __httpRequest,
-                request: request);
+                httpRequestMessage: __httpRequest);
 
             using var __response = await HttpClient.SendAsync(
                 request: __httpRequest,
@@ -86,7 +71,7 @@ namespace HeyGen
             ProcessResponse(
                 client: HttpClient,
                 response: __response);
-            ProcessV1WebhookEndpointAddResponse(
+            ProcessStreamingAvatarListResponse(
                 httpClient: HttpClient,
                 httpResponseMessage: __response);
 
@@ -150,34 +135,6 @@ namespace HeyGen
                     };
                 }
             }
-        }
-
-        /// <summary>
-        /// v1/webhook/endpoint.add<br/>
-        /// v1/webhook/endpoint.add
-        /// </summary>
-        /// <param name="events">
-        /// Example: []
-        /// </param>
-        /// <param name="url">
-        /// Example: &lt;url&gt;
-        /// </param>
-        /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task V1WebhookEndpointAddAsync(
-            global::System.Collections.Generic.IList<object>? events = default,
-            string? url = default,
-            global::System.Threading.CancellationToken cancellationToken = default)
-        {
-            var __request = new global::HeyGen.V1WebhookEndpointAddRequest
-            {
-                Events = events,
-                Url = url,
-            };
-
-            await V1WebhookEndpointAddAsync(
-                request: __request,
-                cancellationToken: cancellationToken).ConfigureAwait(false);
         }
     }
 }
