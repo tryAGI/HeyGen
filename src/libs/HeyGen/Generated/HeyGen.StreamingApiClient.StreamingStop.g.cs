@@ -3,41 +3,41 @@
 
 namespace HeyGen
 {
-    public partial class WebhooksClient
+    public partial class StreamingApiClient
     {
-        partial void PrepareV1WebhookEndpointAddArguments(
+        partial void PrepareStreamingStopArguments(
             global::System.Net.Http.HttpClient httpClient,
-            global::HeyGen.V1WebhookEndpointAddRequest request);
-        partial void PrepareV1WebhookEndpointAddRequest(
+            global::HeyGen.StreamingStopRequest request);
+        partial void PrepareStreamingStopRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::HeyGen.V1WebhookEndpointAddRequest request);
-        partial void ProcessV1WebhookEndpointAddResponse(
+            global::HeyGen.StreamingStopRequest request);
+        partial void ProcessStreamingStopResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
         /// <summary>
-        /// v1/webhook/endpoint.add<br/>
-        /// v1/webhook/endpoint.add
+        /// streaming.stop<br/>
+        /// streaming.stop
         /// </summary>
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HeyGen.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task V1WebhookEndpointAddAsync(
+        public async global::System.Threading.Tasks.Task StreamingStopAsync(
 
-            global::HeyGen.V1WebhookEndpointAddRequest request,
+            global::HeyGen.StreamingStopRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
 
             PrepareArguments(
                 client: HttpClient);
-            PrepareV1WebhookEndpointAddArguments(
+            PrepareStreamingStopArguments(
                 httpClient: HttpClient,
                 request: request);
 
             var __pathBuilder = new global::HeyGen.PathBuilder(
-                path: "/v1/webhook/endpoint.add",
+                path: "/v1/streaming.stop",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
@@ -73,7 +73,7 @@ namespace HeyGen
             PrepareRequest(
                 client: HttpClient,
                 request: __httpRequest);
-            PrepareV1WebhookEndpointAddRequest(
+            PrepareStreamingStopRequest(
                 httpClient: HttpClient,
                 httpRequestMessage: __httpRequest,
                 request: request);
@@ -86,7 +86,7 @@ namespace HeyGen
             ProcessResponse(
                 client: HttpClient,
                 response: __response);
-            ProcessV1WebhookEndpointAddResponse(
+            ProcessStreamingStopResponse(
                 httpClient: HttpClient,
                 httpResponseMessage: __response);
 
@@ -153,29 +153,24 @@ namespace HeyGen
         }
 
         /// <summary>
-        /// v1/webhook/endpoint.add<br/>
-        /// v1/webhook/endpoint.add
+        /// streaming.stop<br/>
+        /// streaming.stop
         /// </summary>
-        /// <param name="events">
-        /// Example: []
-        /// </param>
-        /// <param name="url">
-        /// Example: &lt;url&gt;
+        /// <param name="sessionId">
+        /// Example: &lt;session_id&gt;
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task V1WebhookEndpointAddAsync(
-            global::System.Collections.Generic.IList<object>? events = default,
-            string? url = default,
+        public async global::System.Threading.Tasks.Task StreamingStopAsync(
+            string? sessionId = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HeyGen.V1WebhookEndpointAddRequest
+            var __request = new global::HeyGen.StreamingStopRequest
             {
-                Events = events,
-                Url = url,
+                SessionId = sessionId,
             };
 
-            await V1WebhookEndpointAddAsync(
+            await StreamingStopAsync(
                 request: __request,
                 cancellationToken: cancellationToken).ConfigureAwait(false);
         }

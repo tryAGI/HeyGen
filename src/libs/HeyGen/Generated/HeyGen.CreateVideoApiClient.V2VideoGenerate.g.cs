@@ -3,41 +3,42 @@
 
 namespace HeyGen
 {
-    public partial class WebhooksClient
+    public partial class CreateVideoApiClient
     {
-        partial void PrepareV1WebhookEndpointAddArguments(
+        partial void PrepareV2VideoGenerateArguments(
             global::System.Net.Http.HttpClient httpClient,
-            global::HeyGen.V1WebhookEndpointAddRequest request);
-        partial void PrepareV1WebhookEndpointAddRequest(
+            global::HeyGen.V2VideoGenerateRequest request);
+        partial void PrepareV2VideoGenerateRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::HeyGen.V1WebhookEndpointAddRequest request);
-        partial void ProcessV1WebhookEndpointAddResponse(
+            global::HeyGen.V2VideoGenerateRequest request);
+        partial void ProcessV2VideoGenerateResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
         /// <summary>
-        /// v1/webhook/endpoint.add<br/>
-        /// v1/webhook/endpoint.add
+        /// v2/video/generate<br/>
+        /// Generated Video: [https://app.heygen.com/share/67cd13935445457eaa99040070bdb545](https://app.heygen.com/share/67cd13935445457eaa99040070bdb545)<br/>
+        /// &lt;img src="https://resource.heygen.ai/video/gifs/67cd13935445457eaa99040070bdb545.gif" alt=""&gt;
         /// </summary>
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HeyGen.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task V1WebhookEndpointAddAsync(
+        public async global::System.Threading.Tasks.Task V2VideoGenerateAsync(
 
-            global::HeyGen.V1WebhookEndpointAddRequest request,
+            global::HeyGen.V2VideoGenerateRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
 
             PrepareArguments(
                 client: HttpClient);
-            PrepareV1WebhookEndpointAddArguments(
+            PrepareV2VideoGenerateArguments(
                 httpClient: HttpClient,
                 request: request);
 
             var __pathBuilder = new global::HeyGen.PathBuilder(
-                path: "/v1/webhook/endpoint.add",
+                path: "/v2/video/generate",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
@@ -73,7 +74,7 @@ namespace HeyGen
             PrepareRequest(
                 client: HttpClient,
                 request: __httpRequest);
-            PrepareV1WebhookEndpointAddRequest(
+            PrepareV2VideoGenerateRequest(
                 httpClient: HttpClient,
                 httpRequestMessage: __httpRequest,
                 request: request);
@@ -86,7 +87,7 @@ namespace HeyGen
             ProcessResponse(
                 client: HttpClient,
                 response: __response);
-            ProcessV1WebhookEndpointAddResponse(
+            ProcessV2VideoGenerateResponse(
                 httpClient: HttpClient,
                 httpResponseMessage: __response);
 
@@ -153,29 +154,48 @@ namespace HeyGen
         }
 
         /// <summary>
-        /// v1/webhook/endpoint.add<br/>
-        /// v1/webhook/endpoint.add
+        /// v2/video/generate<br/>
+        /// Generated Video: [https://app.heygen.com/share/67cd13935445457eaa99040070bdb545](https://app.heygen.com/share/67cd13935445457eaa99040070bdb545)<br/>
+        /// &lt;img src="https://resource.heygen.ai/video/gifs/67cd13935445457eaa99040070bdb545.gif" alt=""&gt;
         /// </summary>
-        /// <param name="events">
-        /// Example: []
+        /// <param name="aspectRatio">
+        /// Example: openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464
         /// </param>
-        /// <param name="url">
-        /// Example: &lt;url&gt;
+        /// <param name="callbackId">
+        /// Example: openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464
+        /// </param>
+        /// <param name="dimension"></param>
+        /// <param name="test">
+        /// Example: true
+        /// </param>
+        /// <param name="title">
+        /// Example: My Title
+        /// </param>
+        /// <param name="videoInputs">
+        /// Example: [{"character":{"avatar_id":"Kristin_public_3_20240108","avatar_style":"normal","type":"avatar"},"voice":{"input_text":"Welcome to the new era of video creation with HeyGen! Simply type your script to get started!","type":"text","voice_id":"2f72ee82b83d4b00af16c4771d611752"}}]
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task V1WebhookEndpointAddAsync(
-            global::System.Collections.Generic.IList<object>? events = default,
-            string? url = default,
+        public async global::System.Threading.Tasks.Task V2VideoGenerateAsync(
+            object? aspectRatio = default,
+            object? callbackId = default,
+            global::HeyGen.V2VideoGenerateRequestDimension? dimension = default,
+            bool? test = default,
+            string? title = default,
+            global::System.Collections.Generic.IList<global::HeyGen.V2VideoGenerateRequestVideoInput>? videoInputs = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HeyGen.V1WebhookEndpointAddRequest
+            var __request = new global::HeyGen.V2VideoGenerateRequest
             {
-                Events = events,
-                Url = url,
+                AspectRatio = aspectRatio,
+                CallbackId = callbackId,
+                Dimension = dimension,
+                Test = test,
+                Title = title,
+                VideoInputs = videoInputs,
             };
 
-            await V1WebhookEndpointAddAsync(
+            await V2VideoGenerateAsync(
                 request: __request,
                 cancellationToken: cancellationToken).ConfigureAwait(false);
         }

@@ -2,35 +2,31 @@
 
 namespace HeyGen
 {
-    public partial interface IWebhooksClient
+    public partial interface IStreamingApiClient
     {
         /// <summary>
-        /// v1/webhook/endpoint.add<br/>
-        /// v1/webhook/endpoint.add
+        /// streaming.new<br/>
+        /// streaming.new
         /// </summary>
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HeyGen.ApiException"></exception>
-        global::System.Threading.Tasks.Task V1WebhookEndpointAddAsync(
+        global::System.Threading.Tasks.Task StreamingNewAsync(
 
-            global::HeyGen.V1WebhookEndpointAddRequest request,
+            global::HeyGen.StreamingNewRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
-        /// v1/webhook/endpoint.add<br/>
-        /// v1/webhook/endpoint.add
+        /// streaming.new<br/>
+        /// streaming.new
         /// </summary>
-        /// <param name="events">
-        /// Example: []
-        /// </param>
-        /// <param name="url">
-        /// Example: &lt;url&gt;
+        /// <param name="quality">
+        /// Example: medium
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task V1WebhookEndpointAddAsync(
-            global::System.Collections.Generic.IList<object>? events = default,
-            string? url = default,
+        global::System.Threading.Tasks.Task StreamingNewAsync(
+            string? quality = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }
