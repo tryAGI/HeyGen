@@ -12,6 +12,7 @@ namespace HeyGen
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HeyGen.ApiException"></exception>
         global::System.Threading.Tasks.Task PersonalizedVideoAddContactAsync(
+
             global::HeyGen.PersonalizedVideoAddContactRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
 
