@@ -3,41 +3,41 @@
 
 namespace HeyGen
 {
-    public partial class WebhooksClient
+    public partial class StreamingApiClient
     {
-        partial void PrepareV1WebhookEndpointAddArguments(
+        partial void PrepareStreamingCreateTokenArguments(
             global::System.Net.Http.HttpClient httpClient,
-            global::HeyGen.V1WebhookEndpointAddRequest request);
-        partial void PrepareV1WebhookEndpointAddRequest(
+            object request);
+        partial void PrepareStreamingCreateTokenRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::HeyGen.V1WebhookEndpointAddRequest request);
-        partial void ProcessV1WebhookEndpointAddResponse(
+            object request);
+        partial void ProcessStreamingCreateTokenResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
         /// <summary>
-        /// v1/webhook/endpoint.add<br/>
-        /// v1/webhook/endpoint.add
+        /// streaming.create_token<br/>
+        /// streaming.create_token
         /// </summary>
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HeyGen.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task V1WebhookEndpointAddAsync(
+        public async global::System.Threading.Tasks.Task StreamingCreateTokenAsync(
 
-            global::HeyGen.V1WebhookEndpointAddRequest request,
+            object request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
 
             PrepareArguments(
                 client: HttpClient);
-            PrepareV1WebhookEndpointAddArguments(
+            PrepareStreamingCreateTokenArguments(
                 httpClient: HttpClient,
                 request: request);
 
             var __pathBuilder = new global::HeyGen.PathBuilder(
-                path: "/v1/webhook/endpoint.add",
+                path: "/v1/streaming.create_token",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
@@ -63,7 +63,7 @@ namespace HeyGen
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
                 }
             }
-            var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
+            var __httpRequestContentBody = global::System.Text.Json.JsonSerializer.Serialize(request, request.GetType(), JsonSerializerContext);
             var __httpRequestContent = new global::System.Net.Http.StringContent(
                 content: __httpRequestContentBody,
                 encoding: global::System.Text.Encoding.UTF8,
@@ -73,7 +73,7 @@ namespace HeyGen
             PrepareRequest(
                 client: HttpClient,
                 request: __httpRequest);
-            PrepareV1WebhookEndpointAddRequest(
+            PrepareStreamingCreateTokenRequest(
                 httpClient: HttpClient,
                 httpRequestMessage: __httpRequest,
                 request: request);
@@ -86,7 +86,7 @@ namespace HeyGen
             ProcessResponse(
                 client: HttpClient,
                 response: __response);
-            ProcessV1WebhookEndpointAddResponse(
+            ProcessStreamingCreateTokenResponse(
                 httpClient: HttpClient,
                 httpResponseMessage: __response);
 
@@ -153,29 +153,19 @@ namespace HeyGen
         }
 
         /// <summary>
-        /// v1/webhook/endpoint.add<br/>
-        /// v1/webhook/endpoint.add
+        /// streaming.create_token<br/>
+        /// streaming.create_token
         /// </summary>
-        /// <param name="events">
-        /// Example: []
-        /// </param>
-        /// <param name="url">
-        /// Example: &lt;url&gt;
-        /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task V1WebhookEndpointAddAsync(
-            global::System.Collections.Generic.IList<object>? events = default,
-            string? url = default,
+        public async global::System.Threading.Tasks.Task StreamingCreateTokenAsync(
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HeyGen.V1WebhookEndpointAddRequest
+            var __request = new object
             {
-                Events = events,
-                Url = url,
             };
 
-            await V1WebhookEndpointAddAsync(
+            await StreamingCreateTokenAsync(
                 request: __request,
                 cancellationToken: cancellationToken).ConfigureAwait(false);
         }
