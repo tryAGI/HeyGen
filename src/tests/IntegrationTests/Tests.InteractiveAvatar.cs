@@ -11,6 +11,6 @@ public partial class Tests
         // Interactive Avatar: Create up to 3 concurrent Streaming sessions; up to 300 minutes per month. Documentation.
         using var api = GetAuthenticatedApi();
 
-        await api.StreamingAPI.StreamingCreateTokenAsync();
+        await api.StreamingApi.StreamingCreateTokenAsync();
     }
 }

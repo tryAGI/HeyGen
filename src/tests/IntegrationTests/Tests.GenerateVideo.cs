@@ -11,7 +11,7 @@ public partial class Tests
         // Interactive Avatar: Create up to 3 concurrent Streaming sessions; up to 300 minutes per month. Documentation.
         using var api = GetAuthenticatedApi();
 
-        await api.CreateVideoAPI.V2VideoGenerateAsync(
+        await api.CreateVideoApi.V2VideoGenerateAsync(
             title: "title",
             test: true,
             dimension: new V2VideoGenerateRequestDimension
