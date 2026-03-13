@@ -10,10 +10,10 @@ C# SDK for the [HeyGen](https://www.heygen.com/) AI video generation platform, a
 
 ```bash
 # Build the solution
-dotnet build HeyGen.sln
+dotnet build HeyGen.slnx
 
 # Build for release (also produces NuGet package)
-dotnet build HeyGen.sln -c Release
+dotnet build HeyGen.slnx -c Release
 
 # Run integration tests (requires HEYGEN_API_KEY env var)
 dotnet test src/tests/IntegrationTests/HeyGen.IntegrationTests.csproj
