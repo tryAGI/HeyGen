@@ -1,9 +1,63 @@
-openapi: '3.2.0'
+openapi: 3.0.3
 info:
   title: HeyGen API
-  description: "Welcome to the **HeyGen API** Postman Collection. This collection provides a convenient way to interact with the HeyGen API directly from Postman.\n\n**Documentation**: [https://docs.heygen.com](https://docs.heygen.com/)  \n**Guides**: [https://docs.heygen.com/docs<br>](https://docs.heygen.com/docs/quick-start)**API Reference**: [https://docs.heygen.com/reference](https://docs.heygen.com/reference/authentication-1)\n\n## Authorization\n\nTo send requests to the API endpoints, you must use a valid API token. You can get your API token from the [Settings &gt; API ](https://app.heygen.com/settings?nav=API) page in your HeyGen account.\n\n1. In Postman, go to the **Environments** tab on the left panel.\n    \n2. Select the **My HeyGen API Environment** environment provided by HeyGen.\n    \n3. Update the `heygen-api-token` value with your current HeyGen API token.\n    \n4. Ensure **My HeyGen API Environment** is selected as the active environment using the environment selector at the top right corner of Postman.\n    \n\n### 400 response\n\nA 400 error response typically indicates that your request body is corrupted. To avoid this, ensure that your request body is correctly formatted and includes all necessary elements, such as closing parentheses.\n\n### **Need some help?**\n\nIf you need assistance, you can reach out to us through the following channels:\n\n- **Customer Support Chat:** Available in our web interface.\n    \n- **Emails:** api@heygen.com, [support@heygen.com](https://mailto:support@heygen.com)\n    \n- **Community Discussions:** Check out our [discussions channel](https://null) – there's a good chance our community has the answer you're looking for."
-  contact: { }
+  description: >-
+    Welcome to the **HeyGen API** Postman Collection. This collection provides a
+    convenient way to interact with the HeyGen API directly from Postman.
+
+
+    **Documentation**: [https://docs.heygen.com](https://docs.heygen.com/)  
+
+    **Guides**:
+    [https://docs.heygen.com/docs<br>](https://docs.heygen.com/docs/quick-start)**API
+    Reference**:
+    [https://docs.heygen.com/reference](https://docs.heygen.com/reference/authentication-1)
+
+
+    ## Authorization
+
+
+    To send requests to the API endpoints, you must use a valid API token. You
+    can get your API token from the [Settings &gt; API
+    ](https://app.heygen.com/settings?nav=API) page in your HeyGen account.
+
+
+    1. In Postman, go to the **Environments** tab on the left panel.
+        
+    2. Select the **My HeyGen API Environment** environment provided by HeyGen.
+        
+    3. Update the `heygen-api-token` value with your current HeyGen API token.
+        
+    4. Ensure **My HeyGen API Environment** is selected as the active
+    environment using the environment selector at the top right corner of
+    Postman.
+        
+
+    ### 400 response
+
+
+    A 400 error response typically indicates that your request body is
+    corrupted. To avoid this, ensure that your request body is correctly
+    formatted and includes all necessary elements, such as closing parentheses.
+
+
+    ### **Need some help?**
+
+
+    If you need assistance, you can reach out to us through the following
+    channels:
+
+
+    - **Customer Support Chat:** Available in our web interface.
+        
+    - **Emails:** api@heygen.com,
+    [support@heygen.com](https://mailto:support@heygen.com)
+        
+    - **Community Discussions:** Check out our [discussions
+    channel](https://null) – there's a good chance our community has the answer
+    you're looking for.
   version: 1.0.0
+  contact: {}
 servers:
   - url: https://api.heygen.com
   - url: https://upload.heygen.com
@@ -63,7 +117,14 @@ paths:
       tags:
         - Create Video API
       summary: v2/video/generate
-      description: "Generated Video: [https://app.heygen.com/share/67cd13935445457eaa99040070bdb545](https://app.heygen.com/share/67cd13935445457eaa99040070bdb545)\n\n<img src=\"https://resource.heygen.ai/video/gifs/67cd13935445457eaa99040070bdb545.gif\" alt=\"\">"
+      description: >-
+        Generated Video:
+        [https://app.heygen.com/share/67cd13935445457eaa99040070bdb545](https://app.heygen.com/share/67cd13935445457eaa99040070bdb545)
+
+
+        <img
+        src="https://resource.heygen.ai/video/gifs/67cd13935445457eaa99040070bdb545.gif"
+        alt="">
       operationId: v2VideoGenerate
       requestBody:
         content:
@@ -72,10 +133,10 @@ paths:
               type: object
               properties:
                 aspect_ratio:
-                  type: 'null'
+                  nullable: true
                   example: null
                 callback_id:
-                  type: 'null'
+                  nullable: true
                   example: null
                 dimension:
                   type: object
@@ -114,7 +175,9 @@ paths:
                         properties:
                           input_text:
                             type: string
-                            example: Welcome to the new era of video creation with HeyGen! Simply type your script to get started!
+                            example: >-
+                              Welcome to the new era of video creation with
+                              HeyGen! Simply type your script to get started!
                           type:
                             type: string
                             example: text
@@ -127,7 +190,9 @@ paths:
                         avatar_style: normal
                         type: avatar
                       voice:
-                        input_text: Welcome to the new era of video creation with HeyGen! Simply type your script to get started!
+                        input_text: >-
+                          Welcome to the new era of video creation with HeyGen!
+                          Simply type your script to get started!
                         type: text
                         voice_id: 2f72ee82b83d4b00af16c4771d611752
             examples:
@@ -146,7 +211,9 @@ paths:
                         avatar_style: normal
                         type: avatar
                       voice:
-                        input_text: Welcome to the new era of video creation with HeyGen! Simply type your script to get started!
+                        input_text: >-
+                          Welcome to the new era of video creation with HeyGen!
+                          Simply type your script to get started!
                         type: text
                         voice_id: 2f72ee82b83d4b00af16c4771d611752
       responses:
@@ -193,7 +260,14 @@ paths:
       tags:
         - Template API
       summary: v2/template/generate
-      description: "Generated Video: [https://app.heygen.com/videos/7cba9d29d6db46b88471221fdbc4fb75](https://app.heygen.com/videos/7cba9d29d6db46b88471221fdbc4fb75)\n\n<img src=\"https://resource.heygen.ai/video/gifs/7cba9d29d6db46b88471221fdbc4fb75.gif\" alt=\"\">"
+      description: >-
+        Generated Video:
+        [https://app.heygen.com/videos/7cba9d29d6db46b88471221fdbc4fb75](https://app.heygen.com/videos/7cba9d29d6db46b88471221fdbc4fb75)
+
+
+        <img
+        src="https://resource.heygen.ai/video/gifs/7cba9d29d6db46b88471221fdbc4fb75.gif"
+        alt="">
       operationId: v2TemplateGenerate
       requestBody:
         content:
@@ -276,7 +350,9 @@ paths:
       tags:
         - Video Translate API
       summary: v2/video_translate
-      description: 'Generated Video: [https://app.heygen.com/video-translation/share/dab5a987e6154b0cb7e606c858043fa9](https://app.heygen.com/video-translation/share/dab5a987e6154b0cb7e606c858043fa9)'
+      description: >-
+        Generated Video:
+        [https://app.heygen.com/video-translation/share/dab5a987e6154b0cb7e606c858043fa9](https://app.heygen.com/video-translation/share/dab5a987e6154b0cb7e606c858043fa9)
       operationId: v2VideoTranslate
       requestBody:
         content:
@@ -461,12 +537,12 @@ paths:
                   example: <session_id>
                 text:
                   type: string
-                  example: 'Hey, there!'
+                  example: Hey, there!
             examples:
               streaming.task:
                 value:
                   session_id: <session_id>
-                  text: 'Hey, there!'
+                  text: Hey, there!
       responses:
         '200':
           description: ''
@@ -498,7 +574,9 @@ paths:
       tags:
         - Streaming API
       summary: streaming.interrupt
-      description: 'This is endpoint is to interrupt a speaking avatar. If the avatar is not speaking, it doesn''t do anything.'
+      description: >-
+        This is endpoint is to interrupt a speaking avatar. If the avatar is not
+        speaking, it doesn't do anything.
       operationId: streamingInterrupt
       requestBody:
         content:
@@ -528,9 +606,10 @@ paths:
           application/json:
             schema:
               type: object
+              properties: {}
             examples:
               streaming.create_token:
-                value: { }
+                value: {}
       responses:
         '200':
           description: ''
@@ -575,15 +654,15 @@ paths:
               properties:
                 events:
                   type: array
-                  items: { }
-                  example: [ ]
+                  items: {}
+                  example: []
                 url:
                   type: string
                   example: <url>
             examples:
               v1/webhook/endpoint.add:
                 value:
-                  events: [ ]
+                  events: []
                   url: <url>
       responses:
         '200':
@@ -632,7 +711,7 @@ paths:
       description: v1/talking_photo (upload)
       operationId: v1TalkingPhotoUpload
       requestBody:
-        content: { }
+        content: {}
       responses:
         '200':
           description: ''
@@ -736,7 +815,7 @@ paths:
       description: v1/asset (upload)
       operationId: v1AssetUpload
       requestBody:
-        content: { }
+        content: {}
       responses:
         '200':
           description: ''
@@ -761,24 +840,84 @@ components:
       name: X-Api-Key
       in: header
 security:
-  - apiKey: [ ]
+  - apiKey: []
 tags:
   - name: Lists
   - name: Create Video API
-    description: "Create personalized avatar videos with ease using the **HeyGen API**. By selecting an avatar and a voice, you can create engaging videos for various purposes. 🌟\n\n**Guide**: [https://docs.heygen.com/docs/create-video<br>](https://docs.heygen.com/docs/create-video)**Reference**: [https://docs.heygen.com/reference/create-an-avatar-video-v2](https://docs.heygen.com/reference/create-an-avatar-video-v2)"
+    description: >-
+      Create personalized avatar videos with ease using the **HeyGen API**. By
+      selecting an avatar and a voice, you can create engaging videos for
+      various purposes. 🌟
+
+
+      **Guide**:
+      [https://docs.heygen.com/docs/create-video<br>](https://docs.heygen.com/docs/create-video)**Reference**:
+      [https://docs.heygen.com/reference/create-an-avatar-video-v2](https://docs.heygen.com/reference/create-an-avatar-video-v2)
   - name: Template API
-    description: "Templates enable you to add and customize existing text, images, videos, audios (coming soon), voices and avatars, while avatar videos consist only of avatars without these elements. If you plan to use it within a workflow and need richer content, templates are likely a better fit for your use case compared to simple talking avatar videos. 🌟\n\n**Quick Comparison:**\n\n- **Avatar Videos:** Avatar videos are centered around avatars delivering content without any additional elements. They are ideal for straightforward, avatar-focused communication.\n    \n- **Template Videos:** In contrast, template videos offer a wide canvas for creativity. They enable you to customize existing text, images, videos, audios, voices and avatars seamlessly. If you need a richer, more versatile content format for your workflow, templates are the perfect choice.\n    \n\n**Guide**: [https://docs.heygen.com/docs/generate-video-from-template-v2](https://docs.heygen.com/docs/generate-video-from-template-v2)  \n**Reference**: [https://docs.heygen.com/reference/generate-from-template-v2](https://docs.heygen.com/reference/generate-from-template-v2)[](https://docs.heygen.com/reference/create-an-avatar-video-v2)"
+    description: >-
+      Templates enable you to add and customize existing text, images, videos,
+      audios (coming soon), voices and avatars, while avatar videos consist only
+      of avatars without these elements. If you plan to use it within a workflow
+      and need richer content, templates are likely a better fit for your use
+      case compared to simple talking avatar videos. 🌟
+
+
+      **Quick Comparison:**
+
+
+      - **Avatar Videos:** Avatar videos are centered around avatars delivering
+      content without any additional elements. They are ideal for
+      straightforward, avatar-focused communication.
+          
+      - **Template Videos:** In contrast, template videos offer a wide canvas
+      for creativity. They enable you to customize existing text, images,
+      videos, audios, voices and avatars seamlessly. If you need a richer, more
+      versatile content format for your workflow, templates are the perfect
+      choice.
+          
+
+      **Guide**:
+      [https://docs.heygen.com/docs/generate-video-from-template-v2](https://docs.heygen.com/docs/generate-video-from-template-v2)  
+
+      **Reference**:
+      [https://docs.heygen.com/reference/generate-from-template-v2](https://docs.heygen.com/reference/generate-from-template-v2)[](https://docs.heygen.com/reference/create-an-avatar-video-v2)
   - name: Video Translate API
-    description: "The [Video Translate](https://labs.heygen.com/video-translate) by HeyGen provides a powerful solution for effortlessly translating videos, integrating natural voice cloning and authentic speaking styles seamlessly. Now, you can harness its capabilities programmatically through the **Video Translate API**!\n\n**Guide**: [https://docs.heygen.com/docs/video-translate-api<br>](https://docs.heygen.com/docs/video-translate-api)**Reference**: [https://docs.heygen.com/reference/video-translate](https://docs.heygen.com/reference/video-translate)"
+    description: "The\_[Video Translate](https://labs.heygen.com/video-translate)\_by HeyGen\_provides a powerful solution for effortlessly translating videos, integrating natural voice cloning and authentic speaking styles seamlessly. Now, you can harness its capabilities programmatically through the\_**Video Translate API**!\n\n**Guide**: [https://docs.heygen.com/docs/video-translate-api<br>](https://docs.heygen.com/docs/video-translate-api)**Reference**: [https://docs.heygen.com/reference/video-translate](https://docs.heygen.com/reference/video-translate)"
   - name: Streaming API
-    description: "HeyGen's **Streaming API** allows developers to seamlessly integrate dynamic digital avatars into their applications for immersive and interactive user experiences. With this API, you can create _virtual assistants, real-time training simulations,_ and more, with a focus on real-time, low-latency communication between _users_ and _avatars_ with power of WebRTC.\n\n**Guide**: [https://docs.heygen.com/docs/streaming-api<br>](https://docs.heygen.com/docs/streaming-api)**Reference**: [https://docs.heygen.com/reference/new-session](https://docs.heygen.com/reference/new-session)"
+    description: >-
+      HeyGen's **Streaming API** allows developers to seamlessly integrate
+      dynamic digital avatars into their applications for immersive and
+      interactive user experiences. With this API, you can create _virtual
+      assistants, real-time training simulations,_ and more, with a focus on
+      real-time, low-latency communication between _users_ and _avatars_ with
+      power of WebRTC.
+
+
+      **Guide**:
+      [https://docs.heygen.com/docs/streaming-api<br>](https://docs.heygen.com/docs/streaming-api)**Reference**:
+      [https://docs.heygen.com/reference/new-session](https://docs.heygen.com/reference/new-session)
   - name: Webhooks
-    description: "Webhook events are how the **HeyGen** notifies your _endpoints_ when a variety of interactions or events happen, including when avatar video processing _succeeds_ or _fails_. Webhook events are sent by HeyGen as POST requests to your webhook endpoint.\n\n**Guide**: [https://docs.heygen.com/docs/using-heygens-webhook-events<br>](https://docs.heygen.com/docs/using-heygens-webhook-events)**Reference**: [https://docs.heygen.com/reference/add-a-webhook-endpoint](https://docs.heygen.com/reference/add-a-webhook-endpoint)"
+    description: "Webhook events are how the\_**HeyGen**\_notifies your\__endpoints_\_when a variety of interactions or events happen, including when avatar video processing\__succeeds_\_or\__fails_. Webhook events are sent by HeyGen as POST requests to your webhook endpoint.\n\n**Guide**: [https://docs.heygen.com/docs/using-heygens-webhook-events<br>](https://docs.heygen.com/docs/using-heygens-webhook-events)**Reference**: [https://docs.heygen.com/reference/add-a-webhook-endpoint](https://docs.heygen.com/reference/add-a-webhook-endpoint)"
   - name: Talking Photo
-    description: "These API endpoints allow you to manage photo avatars in your account.\n\n**Reference**: [https://docs.heygen.com/reference/upload-talking-photo](https://docs.heygen.com/reference/upload-talking-photo)"
+    description: >-
+      These API endpoints allow you to manage photo avatars in your account.
+
+
+      **Reference**:
+      [https://docs.heygen.com/reference/upload-talking-photo](https://docs.heygen.com/reference/upload-talking-photo)
   - name: Personalized Video
-    description: "Import contacts into your HeyGen **Personalized Video** campaign. \n\n**Guide**: [https://docs.heygen.com/docs/import-contacts-via-api](https://docs.heygen.com/docs/import-contacts-via-api)  \nReference: [https://docs.heygen.com/reference/add-contact](https://docs.heygen.com/reference/add-contact)"
+    description: "Import contacts into your HeyGen\_**Personalized Video**\_campaign.\_\n\n**Guide**: [https://docs.heygen.com/docs/import-contacts-via-api](https://docs.heygen.com/docs/import-contacts-via-api)  \nReference: [https://docs.heygen.com/reference/add-contact](https://docs.heygen.com/reference/add-contact)"
   - name: User
-    description: "Obtain information about your account.\n\n**Reference**: [https://docs.heygen.com/reference/get-remaining-quota-v2](https://docs.heygen.com/reference/get-remaining-quota-v2)"
+    description: >-
+      Obtain information about your account.
+
+
+      **Reference**:
+      [https://docs.heygen.com/reference/get-remaining-quota-v2](https://docs.heygen.com/reference/get-remaining-quota-v2)
   - name: Assets
-    description: "Upload an image or video asset to your account.\n\n**Reference**: [https://docs.heygen.com/reference/upload-asset-1](https://docs.heygen.com/reference/upload-asset-1)"
+    description: >-
+      Upload an image or video asset to your account.
+
+
+      **Reference**:
+      [https://docs.heygen.com/reference/upload-asset-1](https://docs.heygen.com/reference/upload-asset-1)
