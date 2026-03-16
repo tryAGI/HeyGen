@@ -1,7 +1,11 @@
 site_name: HeyGen .NET Documentation
 nav:
 - Overview: index.md
-# EXAMPLES #
+# EXAMPLES:START
+- Examples:
+  - GenerateVideo: samples/GenerateVideo.md
+  - InteractiveAvatar: samples/InteractiveAvatar.md
+# EXAMPLES:END
         
 theme:
   name: material
