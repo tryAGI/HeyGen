@@ -16,7 +16,7 @@
 ```csharp
 using HeyGen;
 
-using var api = new HeyGenApi(apiKey);
+using var api = new HeyGenClient(apiKey);
 ```
 
 ## Support

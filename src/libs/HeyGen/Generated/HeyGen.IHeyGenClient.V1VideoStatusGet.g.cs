@@ -2,7 +2,7 @@
 
 namespace HeyGen
 {
-    public partial interface IHeyGenApi
+    public partial interface IHeyGenClient
     {
         /// <summary>
         /// v1/video_status.get<br/>

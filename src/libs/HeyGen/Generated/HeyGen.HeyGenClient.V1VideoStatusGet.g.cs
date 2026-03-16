@@ -3,7 +3,7 @@
 
 namespace HeyGen
 {
-    public partial class HeyGenApi
+    public partial class HeyGenClient
     {
         partial void PrepareV1VideoStatusGetArguments(
             global::System.Net.Http.HttpClient httpClient,

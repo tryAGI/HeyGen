@@ -8,7 +8,7 @@ if [ $? -ne 0 ]; then
 fi
 autosdk generate openapi.yaml \
   --namespace HeyGen \
-  --clientClassName HeyGenApi \
+  --clientClassName HeyGenClient \
   --targetFramework net10.0 \
   --output Generated \
   --exclude-deprecated-operations

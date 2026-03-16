@@ -3,7 +3,7 @@
 
 namespace HeyGen
 {
-    public sealed partial class HeyGenApi
+    public sealed partial class HeyGenClient
     {
         /// <inheritdoc/>
         public void AuthorizeUsingApiKeyInHeader(

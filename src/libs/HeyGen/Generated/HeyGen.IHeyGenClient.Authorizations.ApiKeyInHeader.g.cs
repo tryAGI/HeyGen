@@ -3,7 +3,7 @@
 
 namespace HeyGen
 {
-    public partial interface IHeyGenApi
+    public partial interface IHeyGenClient
     {
         /// <summary>
         /// Authorize using ApiKey authentication.
