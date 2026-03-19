@@ -1,3 +1,9 @@
+/*
+order: 20
+title: Interactive Avatar
+slug: interactive-avatar
+*/
+
 namespace HeyGen.IntegrationTests;
 
 public partial class Tests

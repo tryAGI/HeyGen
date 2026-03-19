@@ -1,3 +1,9 @@
+/*
+order: 10
+title: Generate Video
+slug: generate-video
+*/
+
 namespace HeyGen.IntegrationTests;
 
 public partial class Tests
