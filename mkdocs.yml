@@ -3,8 +3,8 @@ nav:
 - Overview: index.md
 # EXAMPLES:START
 - Examples:
-  - GenerateVideo: samples/GenerateVideo.md
-  - InteractiveAvatar: samples/InteractiveAvatar.md
+  - Generate Video: examples/generate-video.md
+  - Interactive Avatar: examples/interactive-avatar.md
 # EXAMPLES:END
         
 theme:

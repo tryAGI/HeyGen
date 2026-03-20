@@ -1,3 +1,9 @@
+# Generate Video
+
+
+
+This example assumes `using HeyGen;` is in scope and `apiKey` contains your HeyGen API key.
+
 ```csharp
 // https://app.heygen.com/settings?nav=API
 // Your Trial Token can be used to test the following HeyGen APIs at no charge:
