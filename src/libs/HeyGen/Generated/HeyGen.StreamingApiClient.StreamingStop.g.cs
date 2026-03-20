@@ -165,7 +165,6 @@ namespace HeyGen
                 }
             }
         }
-
         /// <summary>
         /// streaming.stop<br/>
         /// streaming.stop

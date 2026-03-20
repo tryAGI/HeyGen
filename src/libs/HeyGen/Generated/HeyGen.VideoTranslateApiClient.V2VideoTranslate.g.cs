@@ -165,7 +165,6 @@ namespace HeyGen
                 }
             }
         }
-
         /// <summary>
         /// v2/video_translate<br/>
         /// Generated Video: [https://app.heygen.com/video-translation/share/dab5a987e6154b0cb7e606c858043fa9](https://app.heygen.com/video-translation/share/dab5a987e6154b0cb7e606c858043fa9)

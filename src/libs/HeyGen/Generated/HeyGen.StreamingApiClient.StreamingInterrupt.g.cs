@@ -165,7 +165,6 @@ namespace HeyGen
                 }
             }
         }
-
         /// <summary>
         /// streaming.interrupt<br/>
         /// This is endpoint is to interrupt a speaking avatar. If the avatar is not speaking, it doesn't do anything.

@@ -15,7 +15,6 @@ namespace HeyGen
 
             global::HeyGen.V1WebhookEndpointAddRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// v1/webhook/endpoint.add<br/>
         /// v1/webhook/endpoint.add

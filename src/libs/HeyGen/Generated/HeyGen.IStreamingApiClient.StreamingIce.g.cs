@@ -15,7 +15,6 @@ namespace HeyGen
 
             global::HeyGen.StreamingIceRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// streaming.ice<br/>
         /// streaming.ice

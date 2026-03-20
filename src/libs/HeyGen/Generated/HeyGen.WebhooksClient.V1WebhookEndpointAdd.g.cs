@@ -165,7 +165,6 @@ namespace HeyGen
                 }
             }
         }
-
         /// <summary>
         /// v1/webhook/endpoint.add<br/>
         /// v1/webhook/endpoint.add

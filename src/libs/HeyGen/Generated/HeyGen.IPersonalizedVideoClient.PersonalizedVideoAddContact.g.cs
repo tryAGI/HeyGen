@@ -15,7 +15,6 @@ namespace HeyGen
 
             global::HeyGen.PersonalizedVideoAddContactRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// personalized_video/add_contact<br/>
         /// personalized_video/add_contact
