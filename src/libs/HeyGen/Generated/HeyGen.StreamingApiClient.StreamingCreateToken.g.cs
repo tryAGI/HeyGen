@@ -165,7 +165,6 @@ namespace HeyGen
                 }
             }
         }
-
         /// <summary>
         /// streaming.create_token<br/>
         /// streaming.create_token

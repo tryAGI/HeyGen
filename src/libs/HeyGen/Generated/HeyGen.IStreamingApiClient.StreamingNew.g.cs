@@ -15,7 +15,6 @@ namespace HeyGen
 
             global::HeyGen.StreamingNewRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// streaming.new<br/>
         /// streaming.new

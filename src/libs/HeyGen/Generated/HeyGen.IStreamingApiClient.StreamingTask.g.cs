@@ -15,7 +15,6 @@ namespace HeyGen
 
             global::HeyGen.StreamingTaskRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// streaming.task<br/>
         /// streaming.task

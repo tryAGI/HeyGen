@@ -16,7 +16,6 @@ namespace HeyGen
 
             global::HeyGen.V2TemplateGenerateRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// v2/template/generate<br/>
         /// Generated Video: [https://app.heygen.com/videos/7cba9d29d6db46b88471221fdbc4fb75](https://app.heygen.com/videos/7cba9d29d6db46b88471221fdbc4fb75)<br/>

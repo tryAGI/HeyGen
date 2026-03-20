@@ -165,7 +165,6 @@ namespace HeyGen
                 }
             }
         }
-
         /// <summary>
         /// personalized_video/add_contact<br/>
         /// personalized_video/add_contact
