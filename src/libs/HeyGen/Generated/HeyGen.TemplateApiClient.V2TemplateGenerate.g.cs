@@ -192,6 +192,7 @@ namespace HeyGen
             global::HeyGen.V2TemplateGenerateRequestVariables? variables = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::HeyGen.V2TemplateGenerateRequest
             {
                 Caption = caption,
