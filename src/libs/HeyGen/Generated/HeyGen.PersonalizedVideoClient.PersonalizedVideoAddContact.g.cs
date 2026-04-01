@@ -182,7 +182,6 @@ namespace HeyGen
             global::System.Collections.Generic.IList<global::HeyGen.PersonalizedVideoAddContactRequestVariablesListItem>? variablesList = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::HeyGen.PersonalizedVideoAddContactRequest
             {
                 ProjectId = projectId,
