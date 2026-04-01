@@ -180,6 +180,7 @@ namespace HeyGen
             string? sessionId = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::HeyGen.StreamingStartRequest
             {
                 Sdp = sdp,
