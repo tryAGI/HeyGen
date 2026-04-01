@@ -178,7 +178,6 @@ namespace HeyGen
             string? quality = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::HeyGen.StreamingNewRequest
             {
                 Quality = quality,

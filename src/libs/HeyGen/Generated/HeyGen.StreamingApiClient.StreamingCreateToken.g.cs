@@ -174,7 +174,6 @@ namespace HeyGen
         public async global::System.Threading.Tasks.Task StreamingCreateTokenAsync(
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new object
             {
             };
