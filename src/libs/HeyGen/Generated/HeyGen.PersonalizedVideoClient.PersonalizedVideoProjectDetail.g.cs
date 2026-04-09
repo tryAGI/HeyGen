@@ -5,6 +5,25 @@ namespace HeyGen
 {
     public partial class PersonalizedVideoClient
     {
+
+
+        private static readonly global::HeyGen.EndPointSecurityRequirement s_PersonalizedVideoProjectDetailSecurityRequirement0 =
+            new global::HeyGen.EndPointSecurityRequirement
+            {
+                Authorizations = new global::HeyGen.EndPointAuthorizationRequirement[]
+                {                    new global::HeyGen.EndPointAuthorizationRequirement
+                    {
+                        Type = "ApiKey",
+                        Location = "Header",
+                        Name = "X-Api-Key",
+                        FriendlyName = "ApiKeyInHeader",
+                    },
+                },
+            };
+        private static readonly global::HeyGen.EndPointSecurityRequirement[] s_PersonalizedVideoProjectDetailSecurityRequirements =
+            new global::HeyGen.EndPointSecurityRequirement[]
+            {                s_PersonalizedVideoProjectDetailSecurityRequirement0,
+            };
         partial void PreparePersonalizedVideoProjectDetailArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string? id);
@@ -35,12 +54,18 @@ namespace HeyGen
                 httpClient: HttpClient,
                 id: ref id);
 
+
+            var __authorizations = global::HeyGen.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_PersonalizedVideoProjectDetailSecurityRequirements,
+                operationName: "PersonalizedVideoProjectDetailAsync");
+
             var __pathBuilder = new global::HeyGen.PathBuilder(
                 path: "/v1/personalized_video/project/detail",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder
                 .AddOptionalParameter("id", id) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -50,7 +75,7 @@ namespace HeyGen
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

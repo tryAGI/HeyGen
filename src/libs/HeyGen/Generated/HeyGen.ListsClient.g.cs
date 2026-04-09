@@ -12,7 +12,7 @@ namespace HeyGen
         /// <summary>
         /// 
         /// </summary>
-        public const string DefaultBaseUrl = "https://api.heygen.com";
+        public const string DefaultBaseUrl = "https://api.heygen.com/";
 
         private bool _disposeHttpClient = true;
 

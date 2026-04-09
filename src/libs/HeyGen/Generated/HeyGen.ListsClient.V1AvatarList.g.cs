@@ -5,6 +5,25 @@ namespace HeyGen
 {
     public partial class ListsClient
     {
+
+
+        private static readonly global::HeyGen.EndPointSecurityRequirement s_V1AvatarListSecurityRequirement0 =
+            new global::HeyGen.EndPointSecurityRequirement
+            {
+                Authorizations = new global::HeyGen.EndPointAuthorizationRequirement[]
+                {                    new global::HeyGen.EndPointAuthorizationRequirement
+                    {
+                        Type = "ApiKey",
+                        Location = "Header",
+                        Name = "X-Api-Key",
+                        FriendlyName = "ApiKeyInHeader",
+                    },
+                },
+            };
+        private static readonly global::HeyGen.EndPointSecurityRequirement[] s_V1AvatarListSecurityRequirements =
+            new global::HeyGen.EndPointSecurityRequirement[]
+            {                s_V1AvatarListSecurityRequirement0,
+            };
         partial void PrepareV1AvatarListArguments(
             global::System.Net.Http.HttpClient httpClient);
         partial void PrepareV1AvatarListRequest(
@@ -28,9 +47,15 @@ namespace HeyGen
             PrepareV1AvatarListArguments(
                 httpClient: HttpClient);
 
+
+            var __authorizations = global::HeyGen.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_V1AvatarListSecurityRequirements,
+                operationName: "V1AvatarListAsync");
+
             var __pathBuilder = new global::HeyGen.PathBuilder(
                 path: "/v1/avatar.list",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -40,7 +65,7 @@ namespace HeyGen
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

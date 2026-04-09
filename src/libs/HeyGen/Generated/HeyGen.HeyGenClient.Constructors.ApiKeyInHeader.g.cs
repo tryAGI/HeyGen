@@ -6,6 +6,7 @@ namespace HeyGen
     public sealed partial class HeyGenClient
     {
         /// <inheritdoc cref="HeyGenClient(global::System.Net.Http.HttpClient?, global::System.Uri?, global::System.Collections.Generic.List{global::HeyGen.EndPointAuthorization}?, bool)"/>
+
         public HeyGenClient(
             string apiKey,
             global::System.Net.Http.HttpClient? httpClient = null,
