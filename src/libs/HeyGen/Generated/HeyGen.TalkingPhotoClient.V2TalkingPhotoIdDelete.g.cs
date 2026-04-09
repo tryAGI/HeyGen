@@ -5,6 +5,25 @@ namespace HeyGen
 {
     public partial class TalkingPhotoClient
     {
+
+
+        private static readonly global::HeyGen.EndPointSecurityRequirement s_V2TalkingPhotoIdDeleteSecurityRequirement0 =
+            new global::HeyGen.EndPointSecurityRequirement
+            {
+                Authorizations = new global::HeyGen.EndPointAuthorizationRequirement[]
+                {                    new global::HeyGen.EndPointAuthorizationRequirement
+                    {
+                        Type = "ApiKey",
+                        Location = "Header",
+                        Name = "X-Api-Key",
+                        FriendlyName = "ApiKeyInHeader",
+                    },
+                },
+            };
+        private static readonly global::HeyGen.EndPointSecurityRequirement[] s_V2TalkingPhotoIdDeleteSecurityRequirements =
+            new global::HeyGen.EndPointSecurityRequirement[]
+            {                s_V2TalkingPhotoIdDeleteSecurityRequirement0,
+            };
         partial void PrepareV2TalkingPhotoIdDeleteArguments(
             global::System.Net.Http.HttpClient httpClient);
         partial void PrepareV2TalkingPhotoIdDeleteRequest(
@@ -28,9 +47,15 @@ namespace HeyGen
             PrepareV2TalkingPhotoIdDeleteArguments(
                 httpClient: HttpClient);
 
+
+            var __authorizations = global::HeyGen.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_V2TalkingPhotoIdDeleteSecurityRequirements,
+                operationName: "V2TalkingPhotoIdDeleteAsync");
+
             var __pathBuilder = new global::HeyGen.PathBuilder(
                 path: "/v2/talking_photo/<id>",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Delete,
@@ -40,7 +65,7 @@ namespace HeyGen
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")
