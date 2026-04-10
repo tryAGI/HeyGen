@@ -9,11 +9,13 @@ namespace HeyGen
         /// Generated Video: [https://app.heygen.com/video-translation/share/dab5a987e6154b0cb7e606c858043fa9](https://app.heygen.com/video-translation/share/dab5a987e6154b0cb7e606c858043fa9)
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HeyGen.ApiException"></exception>
         global::System.Threading.Tasks.Task V2VideoTranslateAsync(
 
             global::HeyGen.V2VideoTranslateRequest request,
+            global::HeyGen.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// v2/video_translate<br/>
@@ -34,6 +36,7 @@ namespace HeyGen
         /// <param name="videoUrl">
         /// Example: https://static.heygen.ai/heygen/asset/originalnew.mp4
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task V2VideoTranslateAsync(
@@ -42,6 +45,7 @@ namespace HeyGen
             string? title = default,
             bool? translateAudioOnly = default,
             string? videoUrl = default,
+            global::HeyGen.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

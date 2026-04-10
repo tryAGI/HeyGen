@@ -26,6 +26,7 @@ namespace HeyGen
             Authorizations.Add(new global::HeyGen.EndPointAuthorization
             {
                 Type = "ApiKey",
+                SchemeId = "ApiKey",
                 Location = "Header",
                 Name = "X-Api-Key",
                 Value = apiKey,
