@@ -6,6 +6,19 @@ namespace HeyGen
     public partial class TemplateApiClient
     {
 
+        private static readonly global::HeyGen.AutoSDKServer[] s_V2TemplatesServers = new global::HeyGen.AutoSDKServer[]
+        {            new global::HeyGen.AutoSDKServer(
+                id: "https-api-heygen-com",
+                name: "api.heygen.com",
+                url: "https://api.heygen.com/",
+                description: ""),
+            new global::HeyGen.AutoSDKServer(
+                id: "https-upload-heygen-com",
+                name: "upload.heygen.com",
+                url: "https://upload.heygen.com/",
+                description: ""),
+        };
+
 
         private static readonly global::HeyGen.EndPointSecurityRequirement s_V2TemplatesSecurityRequirement0 =
             new global::HeyGen.EndPointSecurityRequirement
@@ -74,7 +87,9 @@ namespace HeyGen
             {
                             var __pathBuilder = new global::HeyGen.PathBuilder(
                                 path: "/v2/templates",
-                                baseUri: HttpClient.BaseAddress);
+                                baseUri: ResolveBaseUri(
+                                servers: s_V2TemplatesServers,
+                                defaultBaseUrl: "https://api.heygen.com/"));
                             var __path = __pathBuilder.ToString();
                 __path = global::HeyGen.AutoSDKRequestOptionsSupport.AppendQueryParameters(
                     path: __path,
