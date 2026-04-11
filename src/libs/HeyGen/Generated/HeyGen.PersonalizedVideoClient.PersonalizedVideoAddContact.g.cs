@@ -6,6 +6,19 @@ namespace HeyGen
     public partial class PersonalizedVideoClient
     {
 
+        private static readonly global::HeyGen.AutoSDKServer[] s_PersonalizedVideoAddContactServers = new global::HeyGen.AutoSDKServer[]
+        {            new global::HeyGen.AutoSDKServer(
+                id: "https-api-heygen-com",
+                name: "api.heygen.com",
+                url: "https://api.heygen.com/",
+                description: ""),
+            new global::HeyGen.AutoSDKServer(
+                id: "https-upload-heygen-com",
+                name: "upload.heygen.com",
+                url: "https://upload.heygen.com/",
+                description: ""),
+        };
+
 
         private static readonly global::HeyGen.EndPointSecurityRequirement s_PersonalizedVideoAddContactSecurityRequirement0 =
             new global::HeyGen.EndPointSecurityRequirement
@@ -82,7 +95,9 @@ namespace HeyGen
             {
                             var __pathBuilder = new global::HeyGen.PathBuilder(
                                 path: "/v1/personalized_video/add_contact",
-                                baseUri: HttpClient.BaseAddress);
+                                baseUri: ResolveBaseUri(
+                                servers: s_PersonalizedVideoAddContactServers,
+                                defaultBaseUrl: "https://api.heygen.com/"));
                             var __path = __pathBuilder.ToString();
                 __path = global::HeyGen.AutoSDKRequestOptionsSupport.AppendQueryParameters(
                     path: __path,

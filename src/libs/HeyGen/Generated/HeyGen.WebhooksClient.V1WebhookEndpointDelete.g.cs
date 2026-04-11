@@ -6,6 +6,19 @@ namespace HeyGen
     public partial class WebhooksClient
     {
 
+        private static readonly global::HeyGen.AutoSDKServer[] s_V1WebhookEndpointDeleteServers = new global::HeyGen.AutoSDKServer[]
+        {            new global::HeyGen.AutoSDKServer(
+                id: "https-api-heygen-com",
+                name: "api.heygen.com",
+                url: "https://api.heygen.com/",
+                description: ""),
+            new global::HeyGen.AutoSDKServer(
+                id: "https-upload-heygen-com",
+                name: "upload.heygen.com",
+                url: "https://upload.heygen.com/",
+                description: ""),
+        };
+
 
         private static readonly global::HeyGen.EndPointSecurityRequirement s_V1WebhookEndpointDeleteSecurityRequirement0 =
             new global::HeyGen.EndPointSecurityRequirement
@@ -81,7 +94,9 @@ namespace HeyGen
             {
                             var __pathBuilder = new global::HeyGen.PathBuilder(
                                 path: "/v1/webhook/endpoint.delete",
-                                baseUri: HttpClient.BaseAddress); 
+                                baseUri: ResolveBaseUri(
+                                servers: s_V1WebhookEndpointDeleteServers,
+                                defaultBaseUrl: "https://api.heygen.com/")); 
                             __pathBuilder
                                 .AddOptionalParameter("endpoint_id", endpointId) 
                                 ;

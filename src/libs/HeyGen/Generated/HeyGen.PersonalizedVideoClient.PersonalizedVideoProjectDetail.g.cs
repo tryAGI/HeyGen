@@ -6,6 +6,19 @@ namespace HeyGen
     public partial class PersonalizedVideoClient
     {
 
+        private static readonly global::HeyGen.AutoSDKServer[] s_PersonalizedVideoProjectDetailServers = new global::HeyGen.AutoSDKServer[]
+        {            new global::HeyGen.AutoSDKServer(
+                id: "https-api-heygen-com",
+                name: "api.heygen.com",
+                url: "https://api.heygen.com/",
+                description: ""),
+            new global::HeyGen.AutoSDKServer(
+                id: "https-upload-heygen-com",
+                name: "upload.heygen.com",
+                url: "https://upload.heygen.com/",
+                description: ""),
+        };
+
 
         private static readonly global::HeyGen.EndPointSecurityRequirement s_PersonalizedVideoProjectDetailSecurityRequirement0 =
             new global::HeyGen.EndPointSecurityRequirement
@@ -81,7 +94,9 @@ namespace HeyGen
             {
                             var __pathBuilder = new global::HeyGen.PathBuilder(
                                 path: "/v1/personalized_video/project/detail",
-                                baseUri: HttpClient.BaseAddress); 
+                                baseUri: ResolveBaseUri(
+                                servers: s_PersonalizedVideoProjectDetailServers,
+                                defaultBaseUrl: "https://api.heygen.com/")); 
                             __pathBuilder
                                 .AddOptionalParameter("id", id) 
                                 ;

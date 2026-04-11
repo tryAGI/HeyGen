@@ -5,7 +5,7 @@ namespace HeyGen
 {
     /// <summary>
     /// Create personalized avatar videos with ease using the **HeyGen API**. By selecting an avatar and a voice, you can create engaging videos for various purposes. 🌟<br/>
-    /// **Guide**: [https://docs.heygen.com/docs/create-video](https://docs.heygen.com/docs/create-video)**Reference**: [https://docs.heygen.com/reference/create-an-avatar-video-v2](https://docs.heygen.com/reference/create-an-avatar-video-v2).<br/>
+    /// **Guide**: [https://docs.heygen.com/docs/create-video](https://docs.heygen.com/docs/create-video)**Reference**: [https://docs.heygen.com/reference/create-an-avatar-video-v2](https://docs.heygen.com/reference/create-an-avatar-video-v2)<br/>
     /// If no httpClient is provided, a new one will be created.<br/>
     /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.
     /// </summary>
@@ -20,6 +20,27 @@ namespace HeyGen
         /// The base URL for the API.
         /// </summary>
         public System.Uri? BaseUri { get; }
+
+
+        /// <summary>
+        /// The server options available for this client.
+        /// </summary>
+        public global::System.Collections.Generic.IReadOnlyList<global::HeyGen.AutoSDKServer> AvailableServers { get; }
+
+        /// <summary>
+        /// The currently selected server for this client, if any.
+        /// </summary>
+        public global::HeyGen.AutoSDKServer? SelectedServer { get; set; }
+
+        /// <summary>
+        /// Selects one of the generated server options by id.
+        /// </summary>
+        public bool TrySelectServer(string serverId);
+
+        /// <summary>
+        /// Clears the currently selected server.
+        /// </summary>
+        public void ClearSelectedServer();
 
         /// <summary>
         /// The authorizations to use for the requests.

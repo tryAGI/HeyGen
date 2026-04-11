@@ -6,6 +6,19 @@ namespace HeyGen
     public partial class TalkingPhotoClient
     {
 
+        private static readonly global::HeyGen.AutoSDKServer[] s_V1TalkingPhotoUploadServers = new global::HeyGen.AutoSDKServer[]
+        {            new global::HeyGen.AutoSDKServer(
+                id: "https-api-heygen-com",
+                name: "api.heygen.com",
+                url: "https://api.heygen.com/",
+                description: ""),
+            new global::HeyGen.AutoSDKServer(
+                id: "https-upload-heygen-com",
+                name: "upload.heygen.com",
+                url: "https://upload.heygen.com/",
+                description: ""),
+        };
+
 
         private static readonly global::HeyGen.EndPointSecurityRequirement s_V1TalkingPhotoUploadSecurityRequirement0 =
             new global::HeyGen.EndPointSecurityRequirement
@@ -74,7 +87,9 @@ namespace HeyGen
             {
                             var __pathBuilder = new global::HeyGen.PathBuilder(
                                 path: "/v1/talking_photo",
-                                baseUri: HttpClient.BaseAddress);
+                                baseUri: ResolveBaseUri(
+                                servers: s_V1TalkingPhotoUploadServers,
+                                defaultBaseUrl: "https://api.heygen.com/"));
                             var __path = __pathBuilder.ToString();
                 __path = global::HeyGen.AutoSDKRequestOptionsSupport.AppendQueryParameters(
                     path: __path,
