@@ -1,0 +1,180 @@
+{
+  "Examples": [
+    {
+      "Order": 1,
+      "Title": "v2/video/generate",
+      "Slug": "v2videogenerate",
+      "Description": "Generated Video: [https://app.heygen.com/share/67cd13935445457eaa99040070bdb545](https://app.heygen.com/share/67cd13935445457eaa99040070bdb545)\n\n\u003Cimg src=\u0022https://resource.heygen.ai/video/gifs/67cd13935445457eaa99040070bdb545.gif\u0022 alt=\u0022\u0022\u003E",
+      "Language": "csharp",
+      "Code": "using var client = new HeyGenClient(apiKey);\n\nvar request = global::System.Text.Json.JsonSerializer.Deserialize\u003Cglobal::HeyGen.V2VideoGenerateRequest\u003E(\n    @\u0022{\n  \u0022\u0022aspect_ratio\u0022\u0022: \u0022\u0022openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464\u0022\u0022,\n  \u0022\u0022callback_id\u0022\u0022: \u0022\u0022openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464\u0022\u0022,\n  \u0022\u0022dimension\u0022\u0022: {\n    \u0022\u0022height\u0022\u0022: 720,\n    \u0022\u0022width\u0022\u0022: 1280\n  },\n  \u0022\u0022test\u0022\u0022: true,\n  \u0022\u0022title\u0022\u0022: \u0022\u0022My Title\u0022\u0022,\n  \u0022\u0022video_inputs\u0022\u0022: [\n    {\n      \u0022\u0022character\u0022\u0022: {\n        \u0022\u0022avatar_id\u0022\u0022: \u0022\u0022Kristin_public_3_20240108\u0022\u0022,\n        \u0022\u0022avatar_style\u0022\u0022: \u0022\u0022normal\u0022\u0022,\n        \u0022\u0022type\u0022\u0022: \u0022\u0022avatar\u0022\u0022\n      },\n      \u0022\u0022voice\u0022\u0022: {\n        \u0022\u0022input_text\u0022\u0022: \u0022\u0022Welcome to the new era of video creation with HeyGen! Simply type your script to get started!\u0022\u0022,\n        \u0022\u0022type\u0022\u0022: \u0022\u0022text\u0022\u0022,\n        \u0022\u0022voice_id\u0022\u0022: \u0022\u00222f72ee82b83d4b00af16c4771d611752\u0022\u0022\n      }\n    }\n  ]\n}\u0022)!;\n\nawait client.CreateVideoApi.V2VideoGenerateAsync(\n    request: request\n);",
+      "Format": "sdk",
+      "OperationId": "v2VideoGenerate",
+      "Setup": "This example assumes \u0060using HeyGen;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
+    },
+    {
+      "Order": 2,
+      "Title": "personalized_video/add_contact",
+      "Slug": "personalizedvideoaddcontact",
+      "Description": "personalized_video/add_contact",
+      "Language": "csharp",
+      "Code": "using var client = new HeyGenClient(apiKey);\n\nvar request = global::System.Text.Json.JsonSerializer.Deserialize\u003Cglobal::HeyGen.PersonalizedVideoAddContactRequest\u003E(\n    @\u0022{\n  \u0022\u0022project_id\u0022\u0022: \u0022\u0022\\u003Cproject_id\\u003E\u0022\u0022,\n  \u0022\u0022variables_list\u0022\u0022: [\n    {\n      \u0022\u0022email\u0022\u0022: \u0022\u0022john@mail.com\u0022\u0022,\n      \u0022\u0022first_name\u0022\u0022: \u0022\u0022John\u0022\u0022\n    }\n  ]\n}\u0022)!;\n\nawait client.PersonalizedVideo.PersonalizedVideoAddContactAsync(\n    request: request\n);",
+      "Format": "sdk",
+      "OperationId": "personalizedVideoAddContact",
+      "Setup": "This example assumes \u0060using HeyGen;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
+    },
+    {
+      "Order": 3,
+      "Title": "streaming/avatar.list",
+      "Slug": "streamingavatarlist",
+      "Description": "streaming/avatar.list",
+      "Language": "csharp",
+      "Code": "using var client = new HeyGenClient(apiKey);\nawait client.StreamingApi.StreamingAvatarListAsync();",
+      "Format": "sdk",
+      "OperationId": "streamingAvatarList",
+      "Setup": "This example assumes \u0060using HeyGen;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
+    },
+    {
+      "Order": 4,
+      "Title": "streaming.create_token",
+      "Slug": "streamingcreatetoken",
+      "Description": "streaming.create_token",
+      "Language": "csharp",
+      "Code": "using var client = new HeyGenClient(apiKey);\n\nvar request = global::System.Text.Json.JsonSerializer.Deserialize\u003Cobject\u003E(\n    @\u0022{}\u0022)!;\n\nawait client.StreamingApi.StreamingCreateTokenAsync(\n    request: request\n);",
+      "Format": "sdk",
+      "OperationId": "streamingCreateToken",
+      "Setup": "This example assumes \u0060using HeyGen;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
+    },
+    {
+      "Order": 5,
+      "Title": "streaming.ice",
+      "Slug": "streamingice",
+      "Description": "streaming.ice",
+      "Language": "csharp",
+      "Code": "using var client = new HeyGenClient(apiKey);\n\nvar request = global::System.Text.Json.JsonSerializer.Deserialize\u003Cglobal::HeyGen.StreamingIceRequest\u003E(\n    @\u0022{\n  \u0022\u0022candidate\u0022\u0022: {\n    \u0022\u0022candidate\u0022\u0022: \u0022\u0022\\u003CCANDIDATE\\u003E\u0022\u0022,\n    \u0022\u0022sdpMLineIndex\u0022\u0022: \u0022\u0022\\u003CSDP_MLINE_INDEX\\u003E\u0022\u0022,\n    \u0022\u0022sdpMid\u0022\u0022: \u0022\u0022\\u003CSDP_MID\\u003E\u0022\u0022,\n    \u0022\u0022usernameFragment\u0022\u0022: \u0022\u0022\\u003CUSERNAME_FRAGMENT\\u003E\u0022\u0022\n  },\n  \u0022\u0022session_id\u0022\u0022: \u0022\u0022\\u003CSESSION_ID\\u003E\u0022\u0022\n}\u0022)!;\n\nawait client.StreamingApi.StreamingIceAsync(\n    request: request\n);",
+      "Format": "sdk",
+      "OperationId": "streamingIce",
+      "Setup": "This example assumes \u0060using HeyGen;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
+    },
+    {
+      "Order": 6,
+      "Title": "streaming.interrupt",
+      "Slug": "streaminginterrupt",
+      "Description": "This is endpoint is to interrupt a speaking avatar. If the avatar is not speaking, it doesn\u0027t do anything.",
+      "Language": "csharp",
+      "Code": "using var client = new HeyGenClient(apiKey);\n\nvar request = global::System.Text.Json.JsonSerializer.Deserialize\u003Cglobal::HeyGen.StreamingInterruptRequest\u003E(\n    @\u0022{\n  \u0022\u0022session_id\u0022\u0022: \u0022\u0022\\u003Csession_id\\u003E\u0022\u0022\n}\u0022)!;\n\nawait client.StreamingApi.StreamingInterruptAsync(\n    request: request\n);",
+      "Format": "sdk",
+      "OperationId": "streamingInterrupt",
+      "Setup": "This example assumes \u0060using HeyGen;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
+    },
+    {
+      "Order": 7,
+      "Title": "streaming.list",
+      "Slug": "streaminglist",
+      "Description": "streaming.list",
+      "Language": "csharp",
+      "Code": "using var client = new HeyGenClient(apiKey);\nawait client.StreamingApi.StreamingListAsync();",
+      "Format": "sdk",
+      "OperationId": "streamingList",
+      "Setup": "This example assumes \u0060using HeyGen;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
+    },
+    {
+      "Order": 8,
+      "Title": "streaming.new",
+      "Slug": "streamingnew",
+      "Description": "streaming.new",
+      "Language": "csharp",
+      "Code": "using var client = new HeyGenClient(apiKey);\n\nvar request = global::System.Text.Json.JsonSerializer.Deserialize\u003Cglobal::HeyGen.StreamingNewRequest\u003E(\n    @\u0022{\n  \u0022\u0022quality\u0022\u0022: \u0022\u0022medium\u0022\u0022\n}\u0022)!;\n\nawait client.StreamingApi.StreamingNewAsync(\n    request: request\n);",
+      "Format": "sdk",
+      "OperationId": "streamingNew",
+      "Setup": "This example assumes \u0060using HeyGen;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
+    },
+    {
+      "Order": 9,
+      "Title": "streaming.start",
+      "Slug": "streamingstart",
+      "Description": "streaming.start",
+      "Language": "csharp",
+      "Code": "using var client = new HeyGenClient(apiKey);\n\nvar request = global::System.Text.Json.JsonSerializer.Deserialize\u003Cglobal::HeyGen.StreamingStartRequest\u003E(\n    @\u0022{\n  \u0022\u0022sdp\u0022\u0022: {\n    \u0022\u0022sdp\u0022\u0022: \u0022\u0022v=0\\r\\no=- 865306769317114273 1711711067 IN IP4 0.0.0.0\\r\\ns=-\\r\\nt=0 0\\r\\na=fingerprint:sha-256 5B:57:56:56:47:37:A2:76:46:2B:FA:72:6D:61:1D:70:98:8A:4B:8D:BD:E9:54:7E:0E:8D:86:7B:13:BD:5B:B3\\r\\na=extmap-allow-mixed\\r\\na=group:BUNDLE 0 1 2\\r\\nm=video 9 UDP/TLS/RTP/SAVPF 96\\r\\nc=IN IP4 0.0.0.0\\r\\na=setup:actpass\\r\\na=mid:0\\r\\na=ice-ufrag:WGLlXrCpTGFDczaD\\r\\na=ice-pwd:ikkYSSwwcEqeapAGiibnhMltrcdcsDPE\\r\\na=rtcp-mux\\r\\na=rtcp-rsize\\r\\na=rtpmap:96 VP8/90000\\r\\na=ssrc:771866534 cname:pion\\r\\na=ssrc:771866534 msid:pion video\\r\\na=ssrc:771866534 mslabel:pion\\r\\na=ssrc:771866534 label:video\\r\\na=msid:pion video\\r\\na=sendonly\\r\\na=candidate:211536166 1 udp 2130706431 192.168.95.148 58919 typ host\\r\\na=candidate:211536166 2 udp 2130706431 192.168.95.148 58919 typ host\\r\\na=candidate:233762139 1 udp 2130706431 172.17.0.1 39783 typ host\\r\\na=candidate:233762139 2 udp 2130706431 172.17.0.1 39783 typ host\\r\\na=candidate:2409875042 1 udp 1694498815 3.145.204.238 33743 typ srflx raddr 0.0.0.0 rport 33743\\r\\na=candidate:2409875042 2 udp 1694498815 3.145.204.238 33743 typ srflx raddr 0.0.0.0 rport 33743\\r\\na=candidate:2409875042 1 udp 1694498815 3.145.204.238 52509 typ srflx raddr 0.0.0.0 rport 52509\\r\\na=candidate:2409875042 2 udp 1694498815 3.145.204.238 52509 typ srflx raddr 0.0.0.0 rport 52509\\r\\na=candidate:2409875042 1 udp 1694498815 3.145.204.238 48068 typ srflx raddr 0.0.0.0 rport 48068\\r\\na=candidate:2409875042 2 udp 1694498815 3.145.204.238 48068 typ srflx raddr 0.0.0.0 rport 48068\\r\\na=candidate:2409875042 1 udp 1694498815 3.145.204.238 39574 typ srflx raddr 0.0.0.0 rport 39574\\r\\na=candidate:2409875042 2 udp 1694498815 3.145.204.238 39574 typ srflx raddr 0.0.0.0 rport 39574\\r\\na=candidate:2409875042 1 udp 1694498815 3.145.204.238 60127 typ srflx raddr 0.0.0.0 rport 60127\\r\\na=candidate:2409875042 2 udp 1694498815 3.145.204.238 60127 typ srflx raddr 0.0.0.0 rport 60127\\r\\na=candidate:551173388 1 udp 16777215 34.203.251.67 55901 typ relay raddr 0.0.0.0 rport 38018\\r\\na=candidate:551173388 2 udp 16777215 34.203.251.67 55901 typ relay raddr 0.0.0.0 rport 38018\\r\\na=candidate:551173388 1 udp 16777215 34.203.251.67 26906 typ relay raddr 192.168.95.148 rport 37276\\r\\na=candidate:551173388 2 udp 16777215 34.203.251.67 26906 typ relay raddr 192.168.95.148 rport 37276\\r\\na=candidate:551173388 1 udp 16777215 34.203.251.67 48909 typ relay raddr 192.168.95.148 rport 51224\\r\\na=candidate:551173388 2 udp 16777215 34.203.251.67 48909 typ relay raddr 192.168.95.148 rport 51224\\r\\na=end-of-candidates\\r\\nm=audio 9 UDP/TLS/RTP/SAVPF 111\\r\\nc=IN IP4 0.0.0.0\\r\\na=setup:actpass\\r\\na=mid:1\\r\\na=ice-ufrag:WGLlXrCpTGFDczaD\\r\\na=ice-pwd:ikkYSSwwcEqeapAGiibnhMltrcdcsDPE\\r\\na=rtcp-mux\\r\\na=rtcp-rsize\\r\\na=rtpmap:111 opus/48000/2\\r\\na=fmtp:111 minptime=10;useinbandfec=1\\r\\na=ssrc:4043859165 cname:pion\\r\\na=ssrc:4043859165 msid:pion audio\\r\\na=ssrc:4043859165 mslabel:pion\\r\\na=ssrc:4043859165 label:audio\\r\\na=msid:pion audio\\r\\na=sendrecv\\r\\nm=application 9 UDP/DTLS/SCTP webrtc-datachannel\\r\\nc=IN IP4 0.0.0.0\\r\\na=setup:actpass\\r\\na=mid:2\\r\\na=sendrecv\\r\\na=sctp-port:5000\\r\\na=ice-ufrag:WGLlXrCpTGFDczaD\\r\\na=ice-pwd:ikkYSSwwcEqeapAGiibnhMltrcdcsDPE\\r\\n\u0022\u0022,\n    \u0022\u0022type\u0022\u0022: \u0022\u0022offer\u0022\u0022\n  },\n  \u0022\u0022session_id\u0022\u0022: \u0022\u0022f8c1f5bd-edbd-11ee-ac61-06daf6be75b4\u0022\u0022\n}\u0022)!;\n\nawait client.StreamingApi.StreamingStartAsync(\n    request: request\n);",
+      "Format": "sdk",
+      "OperationId": "streamingStart",
+      "Setup": "This example assumes \u0060using HeyGen;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
+    },
+    {
+      "Order": 10,
+      "Title": "streaming.stop",
+      "Slug": "streamingstop",
+      "Description": "streaming.stop",
+      "Language": "csharp",
+      "Code": "using var client = new HeyGenClient(apiKey);\n\nvar request = global::System.Text.Json.JsonSerializer.Deserialize\u003Cglobal::HeyGen.StreamingStopRequest\u003E(\n    @\u0022{\n  \u0022\u0022session_id\u0022\u0022: \u0022\u0022\\u003Csession_id\\u003E\u0022\u0022\n}\u0022)!;\n\nawait client.StreamingApi.StreamingStopAsync(\n    request: request\n);",
+      "Format": "sdk",
+      "OperationId": "streamingStop",
+      "Setup": "This example assumes \u0060using HeyGen;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
+    },
+    {
+      "Order": 11,
+      "Title": "streaming.task",
+      "Slug": "streamingtask",
+      "Description": "streaming.task",
+      "Language": "csharp",
+      "Code": "using var client = new HeyGenClient(apiKey);\n\nvar request = global::System.Text.Json.JsonSerializer.Deserialize\u003Cglobal::HeyGen.StreamingTaskRequest\u003E(\n    @\u0022{\n  \u0022\u0022session_id\u0022\u0022: \u0022\u0022\\u003Csession_id\\u003E\u0022\u0022,\n  \u0022\u0022text\u0022\u0022: \u0022\u0022Hey, there!\u0022\u0022\n}\u0022)!;\n\nawait client.StreamingApi.StreamingTaskAsync(\n    request: request\n);",
+      "Format": "sdk",
+      "OperationId": "streamingTask",
+      "Setup": "This example assumes \u0060using HeyGen;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
+    },
+    {
+      "Order": 12,
+      "Title": "v2/template/generate",
+      "Slug": "v2templategenerate",
+      "Description": "Generated Video: [https://app.heygen.com/videos/7cba9d29d6db46b88471221fdbc4fb75](https://app.heygen.com/videos/7cba9d29d6db46b88471221fdbc4fb75)\n\n\u003Cimg src=\u0022https://resource.heygen.ai/video/gifs/7cba9d29d6db46b88471221fdbc4fb75.gif\u0022 alt=\u0022\u0022\u003E",
+      "Language": "csharp",
+      "Code": "using var client = new HeyGenClient(apiKey);\n\nvar request = global::System.Text.Json.JsonSerializer.Deserialize\u003Cglobal::HeyGen.V2TemplateGenerateRequest\u003E(\n    @\u0022{\n  \u0022\u0022caption\u0022\u0022: false,\n  \u0022\u0022dimension\u0022\u0022: {\n    \u0022\u0022height\u0022\u0022: 720,\n    \u0022\u0022width\u0022\u0022: 1280\n  },\n  \u0022\u0022test\u0022\u0022: false,\n  \u0022\u0022title\u0022\u0022: \u0022\u0022New Video\u0022\u0022,\n  \u0022\u0022variables\u0022\u0022: {\n    \u0022\u0022first_name\u0022\u0022: {\n      \u0022\u0022name\u0022\u0022: \u0022\u0022first_name\u0022\u0022,\n      \u0022\u0022properties\u0022\u0022: {\n        \u0022\u0022content\u0022\u0022: \u0022\u0022John\u0022\u0022\n      },\n      \u0022\u0022type\u0022\u0022: \u0022\u0022text\u0022\u0022\n    }\n  }\n}\u0022)!;\n\nawait client.TemplateApi.V2TemplateGenerateAsync(\n    request: request\n);",
+      "Format": "sdk",
+      "OperationId": "v2TemplateGenerate",
+      "Setup": "This example assumes \u0060using HeyGen;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
+    },
+    {
+      "Order": 13,
+      "Title": "v2/video_translate",
+      "Slug": "v2videotranslate",
+      "Description": "Generated Video: [https://app.heygen.com/video-translation/share/dab5a987e6154b0cb7e606c858043fa9](https://app.heygen.com/video-translation/share/dab5a987e6154b0cb7e606c858043fa9)",
+      "Language": "csharp",
+      "Code": "using var client = new HeyGenClient(apiKey);\n\nvar request = global::System.Text.Json.JsonSerializer.Deserialize\u003Cglobal::HeyGen.V2VideoTranslateRequest\u003E(\n    @\u0022{\n  \u0022\u0022output_language\u0022\u0022: \u0022\u0022English - American Accent\u0022\u0022,\n  \u0022\u0022speaker_num\u0022\u0022: 1,\n  \u0022\u0022title\u0022\u0022: \u0022\u0022My Title\u0022\u0022,\n  \u0022\u0022translate_audio_only\u0022\u0022: false,\n  \u0022\u0022video_url\u0022\u0022: \u0022\u0022https://static.heygen.ai/heygen/asset/originalnew.mp4\u0022\u0022\n}\u0022)!;\n\nawait client.VideoTranslateApi.V2VideoTranslateAsync(\n    request: request\n);",
+      "Format": "sdk",
+      "OperationId": "v2VideoTranslate",
+      "Setup": "This example assumes \u0060using HeyGen;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
+    },
+    {
+      "Order": 14,
+      "Title": "v2/video_translate/\u003Cid\u003E (status)",
+      "Slug": "v2videotranslateidstatus",
+      "Description": "v2/video_translate/\u003Cid\u003E (status)",
+      "Language": "csharp",
+      "Code": "using var client = new HeyGenClient(apiKey);\nawait client.VideoTranslateApi.V2VideoTranslateIdStatusAsync();",
+      "Format": "sdk",
+      "OperationId": "v2VideoTranslateIdStatus",
+      "Setup": "This example assumes \u0060using HeyGen;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
+    },
+    {
+      "Order": 15,
+      "Title": "v2/video_translate/target_languages",
+      "Slug": "v2videotranslatetargetlanguages",
+      "Description": "v2/video_translate/target_languages",
+      "Language": "csharp",
+      "Code": "using var client = new HeyGenClient(apiKey);\nawait client.VideoTranslateApi.V2VideoTranslateTargetLanguagesAsync();",
+      "Format": "sdk",
+      "OperationId": "v2VideoTranslateTargetLanguages",
+      "Setup": "This example assumes \u0060using HeyGen;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
+    },
+    {
+      "Order": 16,
+      "Title": "v1/webhook/endpoint.add",
+      "Slug": "v1webhookendpointadd",
+      "Description": "v1/webhook/endpoint.add",
+      "Language": "csharp",
+      "Code": "using var client = new HeyGenClient(apiKey);\n\nvar request = global::System.Text.Json.JsonSerializer.Deserialize\u003Cglobal::HeyGen.V1WebhookEndpointAddRequest\u003E(\n    @\u0022{\n  \u0022\u0022events\u0022\u0022: [],\n  \u0022\u0022url\u0022\u0022: \u0022\u0022\\u003Curl\\u003E\u0022\u0022\n}\u0022)!;\n\nawait client.Webhooks.V1WebhookEndpointAddAsync(\n    request: request\n);",
+      "Format": "sdk",
+      "OperationId": "v1WebhookEndpointAdd",
+      "Setup": "This example assumes \u0060using HeyGen;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
+    }
+  ]
+}
