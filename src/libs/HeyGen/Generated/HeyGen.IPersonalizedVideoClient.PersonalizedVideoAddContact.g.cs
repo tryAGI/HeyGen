@@ -21,6 +21,19 @@ namespace HeyGen
         /// personalized_video/add_contact<br/>
         /// personalized_video/add_contact
         /// </summary>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::HeyGen.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::HeyGen.AutoSDKHttpResponse> PersonalizedVideoAddContactAsResponseAsync(
+
+            global::HeyGen.PersonalizedVideoAddContactRequest request,
+            global::HeyGen.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// personalized_video/add_contact<br/>
+        /// personalized_video/add_contact
+        /// </summary>
         /// <param name="projectId">
         /// Example: &lt;project_id&gt;
         /// </param>
