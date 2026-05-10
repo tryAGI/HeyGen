@@ -54,5 +54,6 @@ namespace HeyGen
         public StreamingTaskRequest()
         {
         }
+
     }
 }

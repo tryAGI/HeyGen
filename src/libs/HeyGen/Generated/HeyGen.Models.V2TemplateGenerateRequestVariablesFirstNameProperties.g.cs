@@ -42,5 +42,6 @@ namespace HeyGen
         public V2TemplateGenerateRequestVariablesFirstNameProperties()
         {
         }
+
     }
 }

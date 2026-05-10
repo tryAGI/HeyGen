@@ -99,5 +99,6 @@ namespace HeyGen
         public V2VideoGenerateRequest()
         {
         }
+
     }
 }

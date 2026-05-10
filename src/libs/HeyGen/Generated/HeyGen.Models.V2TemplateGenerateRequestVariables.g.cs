@@ -39,5 +39,6 @@ namespace HeyGen
         public V2TemplateGenerateRequestVariables()
         {
         }
+
     }
 }

@@ -90,5 +90,6 @@ namespace HeyGen
         public V2VideoTranslateRequest()
         {
         }
+
     }
 }
