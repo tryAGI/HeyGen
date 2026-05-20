@@ -21,6 +21,19 @@ namespace HeyGen
         /// v2/video_translate<br/>
         /// Generated Video: [https://app.heygen.com/video-translation/share/dab5a987e6154b0cb7e606c858043fa9](https://app.heygen.com/video-translation/share/dab5a987e6154b0cb7e606c858043fa9)
         /// </summary>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::HeyGen.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::HeyGen.AutoSDKHttpResponse> V2VideoTranslateAsResponseAsync(
+
+            global::HeyGen.V2VideoTranslateRequest request,
+            global::HeyGen.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// v2/video_translate<br/>
+        /// Generated Video: [https://app.heygen.com/video-translation/share/dab5a987e6154b0cb7e606c858043fa9](https://app.heygen.com/video-translation/share/dab5a987e6154b0cb7e606c858043fa9)
+        /// </summary>
         /// <param name="outputLanguage">
         /// Example: English - American Accent
         /// </param>

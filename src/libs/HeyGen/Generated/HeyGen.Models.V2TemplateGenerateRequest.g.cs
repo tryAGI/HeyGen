@@ -84,5 +84,6 @@ namespace HeyGen
         public V2TemplateGenerateRequest()
         {
         }
+
     }
 }

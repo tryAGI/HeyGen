@@ -51,5 +51,6 @@ namespace HeyGen
         public StreamingIceRequest()
         {
         }
+
     }
 }
