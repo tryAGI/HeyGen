@@ -140,7 +140,10 @@ namespace HeyGen
         {
 
             HttpClient = httpClient ?? new global::System.Net.Http.HttpClient();
-            HttpClient.BaseAddress ??= baseUri ?? new global::System.Uri(DefaultBaseUrl);
+            if (baseUri is not null)
+            {
+                HttpClient.BaseAddress ??= baseUri;
+            }
             Authorizations = authorizations ?? new global::System.Collections.Generic.List<global::HeyGen.EndPointAuthorization>();
             Options = options ?? new global::HeyGen.AutoSDKClientOptions();
             _disposeHttpClient = disposeHttpClient;
@@ -253,7 +256,7 @@ namespace HeyGen
                 return explicitBaseUri;
             }
 
-            return ResolveSelectedServer()?.Uri ?? HttpClient.BaseAddress;
+            return ResolveSelectedServer()?.Uri ?? (s_availableServers.Length > 0 ? s_availableServers[0].Uri : HttpClient.BaseAddress);
         }
 
         private global::System.Uri? ResolveBaseUri(
