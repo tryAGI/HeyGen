@@ -4,7 +4,7 @@
 namespace HeyGen
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class V2VideoGenerateRequest
     {
@@ -23,7 +23,7 @@ namespace HeyGen
         public object? CallbackId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("dimension")]
         public global::HeyGen.V2VideoGenerateRequestDimension? Dimension { get; set; }

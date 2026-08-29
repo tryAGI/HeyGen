@@ -12,7 +12,7 @@ namespace HeyGen
     public sealed partial class CreateVideoApiClient : global::HeyGen.ICreateVideoApiClient, global::System.IDisposable
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public const string DefaultBaseUrl = "https://api.heygen.com/";
 
@@ -38,10 +38,17 @@ namespace HeyGen
 
 
         internal global::HeyGen.AutoSDKServerConfiguration AutoSDKServerConfiguration { get; set; } = new global::HeyGen.AutoSDKServerConfiguration();
+
+        internal global::System.Lazy<global::System.Text.Json.Serialization.JsonSerializerContext> JsonSerializerContextProvider { get; set; } = new(() => global::HeyGen.SourceGenerationContext.Default);
+
         /// <summary>
-        /// 
+        ///
         /// </summary>
-        public global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext { get; set; } = global::HeyGen.SourceGenerationContext.Default;
+        public global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext
+        {
+            get => JsonSerializerContextProvider.Value;
+            set => JsonSerializerContextProvider = new(() => value);
+        }
 
 
 

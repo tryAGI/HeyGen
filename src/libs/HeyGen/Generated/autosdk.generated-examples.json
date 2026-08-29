@@ -27,11 +27,11 @@
       "Title": "streaming/avatar.list",
       "Slug": "streamingavatarlist",
       "Description": "streaming/avatar.list",
-      "Language": "csharp",
-      "Code": "using var client = new HeyGenClient(apiKey);\nawait client.StreamingApi.StreamingAvatarListAsync();",
-      "Format": "sdk",
+      "Language": "http",
+      "Code": "### streaming/avatar.list\n# @name streamingAvatarList\nGET {{host}}/v1/streaming/avatar.list\nX-Api-Key: {{api_key}}\nContent-Type: text/plain",
+      "Format": "http",
       "OperationId": "streamingAvatarList",
-      "Setup": "This example assumes \u0060using HeyGen;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
+      "Setup": null
     },
     {
       "Order": 4,
@@ -71,11 +71,11 @@
       "Title": "streaming.list",
       "Slug": "streaminglist",
       "Description": "streaming.list",
-      "Language": "csharp",
-      "Code": "using var client = new HeyGenClient(apiKey);\nawait client.StreamingApi.StreamingListAsync();",
-      "Format": "sdk",
+      "Language": "http",
+      "Code": "### streaming.list\n# @name streamingList\nGET {{host}}/v1/streaming.list\nX-Api-Key: {{api_key}}\nContent-Type: text/plain",
+      "Format": "http",
       "OperationId": "streamingList",
-      "Setup": "This example assumes \u0060using HeyGen;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
+      "Setup": null
     },
     {
       "Order": 8,

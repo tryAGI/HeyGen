@@ -4,7 +4,7 @@
 namespace HeyGen
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class V2TemplateGenerateRequestDimension
     {

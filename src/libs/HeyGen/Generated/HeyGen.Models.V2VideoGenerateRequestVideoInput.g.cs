@@ -4,18 +4,18 @@
 namespace HeyGen
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class V2VideoGenerateRequestVideoInput
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("character")]
         public global::HeyGen.V2VideoGenerateRequestVideoInputCharacter? Character { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("voice")]
         public global::HeyGen.V2VideoGenerateRequestVideoInputVoice? Voice { get; set; }
