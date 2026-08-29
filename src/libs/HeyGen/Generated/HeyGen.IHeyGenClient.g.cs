@@ -82,7 +82,7 @@ namespace HeyGen
 
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext { get; set; }
 
@@ -100,7 +100,7 @@ namespace HeyGen
         public CreateVideoApiClient CreateVideoApi { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ListsClient Lists { get; }
 

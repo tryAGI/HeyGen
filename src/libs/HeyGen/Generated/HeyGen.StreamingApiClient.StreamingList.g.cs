@@ -39,10 +39,12 @@ namespace HeyGen
             {                s_StreamingListSecurityRequirement0,
             };
         partial void PrepareStreamingListArguments(
-            global::System.Net.Http.HttpClient httpClient);
+            global::System.Net.Http.HttpClient httpClient,
+            string request);
         partial void PrepareStreamingListRequest(
             global::System.Net.Http.HttpClient httpClient,
-            global::System.Net.Http.HttpRequestMessage httpRequestMessage);
+            global::System.Net.Http.HttpRequestMessage httpRequestMessage,
+            string request);
         partial void ProcessStreamingListResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -51,14 +53,19 @@ namespace HeyGen
         /// streaming.list<br/>
         /// streaming.list
         /// </summary>
+        /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HeyGen.ApiException"></exception>
         public async global::System.Threading.Tasks.Task StreamingListAsync(
+
+            string request,
             global::HeyGen.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             await StreamingListAsResponseAsync(
+
+                request: request,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
@@ -67,17 +74,23 @@ namespace HeyGen
         /// streaming.list<br/>
         /// streaming.list
         /// </summary>
+        /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HeyGen.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::HeyGen.AutoSDKHttpResponse> StreamingListAsResponseAsync(
+
+            string request,
             global::HeyGen.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+            request = request ?? throw new global::System.ArgumentNullException(nameof(request));
+
             PrepareArguments(
                 client: HttpClient);
             PrepareStreamingListArguments(
-                httpClient: HttpClient);
+                httpClient: HttpClient,
+                request: request);
 
 
             var __authorizations = global::HeyGen.EndPointSecurityResolver.ResolveAuthorizations(
@@ -134,8 +147,14 @@ namespace HeyGen
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
+
+                            var __httpRequestContent = new global::System.Net.Http.StringContent(
+                                content: request,
+                                encoding: global::System.Text.Encoding.UTF8,
+                                mediaType: "text/plain");
+                            __httpRequest.Content = __httpRequestContent;
                 global::HeyGen.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,
                     clientHeaders: Options.Headers,
@@ -146,7 +165,8 @@ namespace HeyGen
                     request: __httpRequest);
                 PrepareStreamingListRequest(
                     httpClient: HttpClient,
-                    httpRequestMessage: __httpRequest);
+                    httpRequestMessage: __httpRequest,
+                    request: request);
 
                 return __httpRequest;
             }
@@ -350,17 +370,15 @@ namespace HeyGen
                                 }
                                 catch (global::System.Exception __ex)
                                 {
-                                    throw new global::HeyGen.ApiException(
+                                    throw global::HeyGen.ApiException.Create(
+                                        statusCode: __response.StatusCode,
                                         message: __content ?? __response.ReasonPhrase ?? string.Empty,
                                         innerException: __ex,
-                                        statusCode: __response.StatusCode)
-                                    {
-                                        ResponseBody = __content,
-                                        ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                        responseBody: __content,
+                                        responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                             __response.Headers,
                                             h => h.Key,
-                                            h => h.Value),
-                                    };
+                                            h => h.Value));
                                 }
                             }
                             else
@@ -388,17 +406,15 @@ namespace HeyGen
                                     {
                                     }
 
-                                    throw new global::HeyGen.ApiException(
+                                    throw global::HeyGen.ApiException.Create(
+                                        statusCode: __response.StatusCode,
                                         message: __content ?? __response.ReasonPhrase ?? string.Empty,
                                         innerException: __ex,
-                                        statusCode: __response.StatusCode)
-                                    {
-                                        ResponseBody = __content,
-                                        ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                        responseBody: __content,
+                                        responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                             __response.Headers,
                                             h => h.Key,
-                                            h => h.Value),
-                                    };
+                                            h => h.Value));
                                 }
                             }
 

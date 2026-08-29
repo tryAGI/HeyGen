@@ -4,7 +4,7 @@
 namespace HeyGen
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class V2TemplateGenerateRequestVariablesFirstName
     {
@@ -16,7 +16,7 @@ namespace HeyGen
         public string? Name { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("properties")]
         public global::HeyGen.V2TemplateGenerateRequestVariablesFirstNameProperties? Properties { get; set; }

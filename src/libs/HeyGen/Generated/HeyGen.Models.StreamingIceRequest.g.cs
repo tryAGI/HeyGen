@@ -4,12 +4,12 @@
 namespace HeyGen
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class StreamingIceRequest
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("candidate")]
         public global::HeyGen.StreamingIceRequestCandidate? Candidate { get; set; }

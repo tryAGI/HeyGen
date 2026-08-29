@@ -4,7 +4,7 @@
 namespace HeyGen
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class V2TemplateGenerateRequest
     {
@@ -16,7 +16,7 @@ namespace HeyGen
         public bool? Caption { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("dimension")]
         public global::HeyGen.V2TemplateGenerateRequestDimension? Dimension { get; set; }
@@ -36,7 +36,7 @@ namespace HeyGen
         public string? Title { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("variables")]
         public global::HeyGen.V2TemplateGenerateRequestVariables? Variables { get; set; }

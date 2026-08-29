@@ -4,12 +4,12 @@
 namespace HeyGen
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class StreamingStartRequest
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("sdp")]
         public global::HeyGen.StreamingStartRequestSdp? Sdp { get; set; }
