@@ -40,14 +40,14 @@ namespace HeyGen
 
         internal global::HeyGen.AutoSDKServerConfiguration AutoSDKServerConfiguration { get; set; } = new global::HeyGen.AutoSDKServerConfiguration();
 
-        internal global::System.Lazy<global::System.Text.Json.Serialization.JsonSerializerContext> JsonSerializerContextProvider { get; set; } = new(() => global::HeyGen.PersonalizedVideoSourceGenerationContext.Default);
+        internal global::System.Lazy<global::System.Text.Json.Serialization.JsonSerializerContext>? JsonSerializerContextProvider { get; set; }
 
         /// <summary>
         ///
         /// </summary>
         public global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext
         {
-            get => JsonSerializerContextProvider.Value;
+            get => JsonSerializerContextProvider?.Value ?? global::HeyGen.PersonalizedVideoSourceGenerationContext.Default;
             set => JsonSerializerContextProvider = new(() => value);
         }
 
